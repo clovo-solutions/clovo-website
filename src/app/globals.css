@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+
+:root {
+  --font-cabinet: 'Sora', system-ui, sans-serif;
+  --font-general: 'DM Sans', system-ui, sans-serif;
+  --font-jetbrains: 'JetBrains Mono', monospace;
+  --accent: #01D957;
+  --accent-rgb: 1, 217, 87;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #01D95730 transparent;
+}
+
+body {
+  background-color: #050505;
+  color: #e0e0e0;
+  font-family: var(--font-general);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #01D95730;
+  border-radius: 3px;
+}
+
+::selection {
+  background: #01D95730;
+  color: #01D957;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 40px rgba(var(--accent-rgb), 0.3),
+                 0 0 80px rgba(var(--accent-rgb), 0.15);
+  }
+
+  .box-glow {
+    box-shadow: 0 0 30px rgba(var(--accent-rgb), 0.1),
+                0 0 60px rgba(var(--accent-rgb), 0.05);
+  }
+
+  .box-glow-strong {
+    box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.2),
+                0 0 80px rgba(var(--accent-rgb), 0.1);
+  }
+
+  .border-glow {
+    border-color: rgba(var(--accent-rgb), 0.3);
+    box-shadow: 0 0 15px rgba(var(--accent-rgb), 0.08),
+                inset 0 0 15px rgba(var(--accent-rgb), 0.03);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #01D957 0%, #01D957 40%, #7DFFA8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(var(--accent-rgb), 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-rgb), 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Noise overlay */
+.noise-overlay::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.015;
+  z-index: 1000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
