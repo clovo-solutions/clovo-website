@@ -66,7 +66,8 @@ export default function Hero() {
           className="text-lg sm:text-xl text-white/40 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
         >
           High-converting websites, automated bookings, and seamless calendar
-          sync — so you can focus on what you do best while we handle the growth.
+          sync — so you can focus on what you do best while we handle the
+          growth.
         </motion.p>
 
         {/* CTAs */}
@@ -128,7 +129,11 @@ export default function Hero() {
                   key={i}
                   className="w-8 h-8 rounded-full border-2 border-dark-900 bg-dark-400"
                   style={{
-                    background: `linear-gradient(135deg, hsl(${150 + i * 20}, 60%, ${25 + i * 5}%) 0%, hsl(${150 + i * 20}, 40%, ${15 + i * 5}%) 100%)`,
+                    background: `linear-gradient(135deg, hsl(${
+                      150 + i * 20
+                    }, 60%, ${25 + i * 5}%) 0%, hsl(${150 + i * 20}, 40%, ${
+                      15 + i * 5
+                    }%) 100%)`,
                   }}
                 />
               ))}

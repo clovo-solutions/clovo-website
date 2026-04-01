@@ -28,7 +28,10 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-28 sm:py-36">
+    <section
+      id="how-it-works"
+      className="relative py-28 sm:py-36 overflow-hidden"
+    >
       {/* Subtle divider */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 

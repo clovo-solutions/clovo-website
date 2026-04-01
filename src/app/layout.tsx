@@ -40,9 +40,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="noise-overlay bg-dark-900 text-white antialiased">
-        {children}
+    <html lang="en" className="dark overflow-x-hidden">
+      <body className="noise-overlay bg-dark-900 text-white antialiased overflow-x-hidden">
+        <div className="overflow-hidden w-full">{children}</div>
       </body>
     </html>
   );
