@@ -45,8 +45,7 @@ export default function HowItWorks() {
             <span className="gradient-text">Effortless Growth</span>
           </h2>
           <p className="text-white/35 text-lg max-w-xl mx-auto">
-            No complexity, no jargon — just a clear path from where you are now
-            to where you want to be.
+            No complexity, no jargon — just a clear path to predictable growth.
           </p>
         </AnimatedSection>
 

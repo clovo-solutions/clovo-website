@@ -23,15 +23,17 @@ export default function Contact() {
                 Get Started
               </span>
               <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
-                Ready to Put Your
+                Ready to Turn Your
                 <br />
-                Growth on{" "}
-                <span className="gradient-text text-glow">Autopilot?</span>
+                Website Into a{" "}
+                <span className="gradient-text text-glow">
+                  Client-Generating Machine?
+                </span>
               </h2>
               <p className="text-white/35 text-base leading-relaxed mb-8 max-w-md">
-                Book a free 30-minute strategy call. We&apos;ll map out exactly how
-                to automate your client acquisition and scale your business — no
-                obligations, no pressure.
+                Book a free 30-minute strategy call. We&apos;ll map out exactly
+                how to automate your client acquisition and scale your business
+                — no obligations, no pressure.
               </p>
 
               {/* Quick benefits */}
@@ -39,7 +41,7 @@ export default function Contact() {
                 {[
                   "Free strategy session — no commitment",
                   "Custom growth plan for your business",
-                  "See projected ROI before you invest",
+                  // "See projected ROI before you invest",
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -146,14 +148,12 @@ export default function Contact() {
                     <p className="text-white/30 text-sm mb-1">
                       Pick a time that works for you
                     </p>
-                    <p className="text-white/15 text-xs mb-6">
-                      Calendly widget loads here
-                    </p>
+
                     <a
-                      href="https://calendly.com"
+                      href="https://calendly.com/louttchenkoo/30min"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-dark-900 text-sm font-semibold rounded-full hover:shadow-[0_0_30px_rgba(1,217,87,0.3)] transition-all duration-300 hover:scale-[1.02]"
+                      className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-accent text-dark-900 text-sm font-semibold rounded-full hover:shadow-[0_0_30px_rgba(1,217,87,0.3)] transition-all duration-300 hover:scale-[1.02]"
                     >
                       Book Your Free Call
                       <svg

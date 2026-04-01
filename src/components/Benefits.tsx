@@ -58,12 +58,11 @@ export default function Benefits() {
             Results That Matter
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-5">
-            Built for{" "}
-            <span className="gradient-text">Measurable Impact</span>
+            Built for <span className="gradient-text">Measurable Impact</span>
           </h2>
           <p className="text-white/35 text-lg max-w-xl mx-auto">
-            Our clients don&apos;t just get a website — they get a growth engine
-            that delivers real, trackable results.
+            We don’t build websites — we build systems that generate results you
+            can actually measure.
           </p>
         </AnimatedSection>
 

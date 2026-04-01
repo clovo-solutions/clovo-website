@@ -71,7 +71,7 @@ const services = [
         <path d="M12 2v20" />
       </svg>
     ),
-    title: "Calendar Sync",
+    title: "Workflow Automation",
     description:
       "Automatic calendar synchronization across Google Calendar, Outlook, and more. Never double-book again.",
     tag: "Integration",
@@ -155,7 +155,7 @@ export default function Services() {
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-5">
             Everything You Need to{" "}
-            <span className="gradient-text">Grow Online</span>
+            <span className="gradient-text"> Attract and Convert Clients</span>
           </h2>
           <p className="text-white/35 text-lg max-w-2xl mx-auto leading-relaxed">
             From your first website to a fully automated client acquisition
