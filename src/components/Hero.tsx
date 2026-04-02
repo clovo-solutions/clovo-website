@@ -65,9 +65,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="text-lg sm:text-xl text-white/40 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
         >
-          High-converting websites and automated systems that bring you clients
-          — so you can focus on running your business while we handle the
-          growth.
+          High-converting websites, automated bookings, and seamless calendar
+          sync — so you can focus on what you do best while we handle the growth.
         </motion.p>
 
         {/* CTAs */}
@@ -129,16 +128,12 @@ export default function Hero() {
                   key={i}
                   className="w-8 h-8 rounded-full border-2 border-dark-900 bg-dark-400"
                   style={{
-                    background: `linear-gradient(135deg, hsl(${
-                      150 + i * 20
-                    }, 60%, ${25 + i * 5}%) 0%, hsl(${150 + i * 20}, 40%, ${
-                      15 + i * 5
-                    }%) 100%)`,
+                    background: `linear-gradient(135deg, hsl(${150 + i * 20}, 60%, ${25 + i * 5}%) 0%, hsl(${150 + i * 20}, 40%, ${15 + i * 5}%) 100%)`,
                   }}
                 />
               ))}
             </div>
-            <span>15+ businesses launched</span>
+            <span>50+ businesses launched</span>
           </div>
           <div className="hidden sm:block w-px h-4 bg-white/10" />
           <div className="flex items-center gap-2">
@@ -156,7 +151,7 @@ export default function Hero() {
                 </svg>
               ))}
             </div>
-            <span>4.9 average rating</span>
+            <span>5.0 average rating</span>
           </div>
         </motion.div>
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Clovo Solutions | Digital Growth for Modern Businesses",
@@ -43,6 +44,7 @@ export default function RootLayout({
     <html lang="en" className="dark overflow-x-hidden">
       <body className="noise-overlay bg-dark-900 text-white antialiased overflow-x-hidden">
         <div className="overflow-hidden w-full">{children}</div>
+        <CookieConsent />
       </body>
     </html>
   );

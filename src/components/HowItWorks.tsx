@@ -28,10 +28,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section
-      id="how-it-works"
-      className="relative py-28 sm:py-36 overflow-hidden"
-    >
+    <section id="how-it-works" className="relative py-28 sm:py-36 overflow-hidden">
       {/* Subtle divider */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
@@ -45,7 +42,8 @@ export default function HowItWorks() {
             <span className="gradient-text">Effortless Growth</span>
           </h2>
           <p className="text-white/35 text-lg max-w-xl mx-auto">
-            No complexity, no jargon — just a clear path to predictable growth.
+            No complexity, no jargon — just a clear path from where you are now
+            to where you want to be.
           </p>
         </AnimatedSection>
 

@@ -5,14 +5,14 @@ import AnimatedSection from "./AnimatedSection";
 const testimonials = [
   {
     quote:
-      "Clovo Solutions completely transformed how we get clients. Our booking rate tripled in the first month — and we didn't lift a finger.",
+      "Clovo Solutions completely transformed how we get clients. Our booking rate doubled in the first month — and we didn't lift a finger.",
     name: "Sarah Mitchell",
     role: "Owner, Glow Studio",
     initials: "SM",
   },
   {
     quote:
-      "The website they built for us looks incredible and actually converts. We went from zero online bookings to 40+ per week.",
+      "The website they built for us looks incredible and actually converts. We went from zero online bookings to 30+ per month.",
     name: "David Chen",
     role: "Director, PhysioFlex",
     initials: "DC",
@@ -37,8 +37,7 @@ export default function Testimonials() {
             Testimonials
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-5">
-            Trusted by{" "}
-            <span className="gradient-text">Growing Businesses</span>
+            Trusted by <span className="gradient-text">Growing Businesses</span>
           </h2>
           <p className="text-white/35 text-lg max-w-xl mx-auto">
             Don&apos;t just take our word for it — hear from the businesses
