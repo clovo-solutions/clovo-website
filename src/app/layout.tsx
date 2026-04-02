@@ -116,10 +116,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark overflow-x-hidden">
-      <head>
-        <StructuredData />
-      </head>
       <body className="noise-overlay bg-dark-900 text-white antialiased overflow-x-hidden">
+        <StructuredData />
         <div className="overflow-hidden w-full">{children}</div>
         <CookieConsent />
       </body>

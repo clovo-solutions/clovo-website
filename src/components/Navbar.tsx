@@ -9,6 +9,7 @@ const navLinks = [
   { href: "#services", label: "Services" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#benefits", label: "Benefits" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#testimonials", label: "Testimonials" },
 ];
 
@@ -36,12 +37,12 @@ export default function Navbar() {
       >
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center group">
             <Image
               src="/logo.svg"
               alt="Clovo Solutions"
-              width={36}
-              height={36}
+              width={64}
+              height={64}
               className="transition-transform duration-300 group-hover:scale-110"
             />
             <span className="font-display font-semibold text-2xl tracking-tight text-white">
