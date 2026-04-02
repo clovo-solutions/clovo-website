@@ -38,16 +38,18 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <Image
-              src="/logo.svg"
-              alt="Clovo Solutions"
-              width={64}
-              height={64}
-              className="transition-transform duration-300 group-hover:scale-110"
-            />
-            <span className="font-display font-semibold text-2xl tracking-tight text-white">
-              Clovo
-              <span className="text-accent">.</span>
+            <div className="h-8 md:h-10 flex items-center overflow-visible">
+              <Image
+                src="/logo.svg"
+                alt="Clovo Solutions"
+                width={64}
+                height={64}
+                className="h-full w-full scale-[1.5] transition-transform duration-300 group-hover:scale-[1.6]"
+                priority
+              />
+            </div>
+            <span className="font-display font-semibold text-xl md:text-2xl tracking-tight text-white">
+              Clovo<span className="text-accent">.</span>
             </span>
           </Link>
 
