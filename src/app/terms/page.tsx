@@ -36,9 +36,7 @@ function TermsContent() {
           <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
             Terms of Service
           </h1>
-          <p className="text-white/30 text-sm">
-            Last updated: April 2, 2026
-          </p>
+          <p className="text-white/30 text-sm">Last updated: April 2, 2026</p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | Clovo Solutions",
   description:
     "Learn how Clovo Solutions handles your data. We respect your privacy and are committed to protecting your personal information.",
+  alternates: { canonical: "https://clovo-solutions.com/privacy" },
 };
 
 export default function PrivacyPolicy() {
@@ -36,9 +37,7 @@ function PrivacyContent() {
           <h1 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white mb-4">
             Privacy Policy
           </h1>
-          <p className="text-white/30 text-sm">
-            Last updated: April 2, 2026
-          </p>
+          <p className="text-white/30 text-sm">Last updated: April 2, 2026</p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
@@ -46,15 +45,15 @@ function PrivacyContent() {
             {/* Intro */}
             <div className="space-y-4">
               <p className="text-white/40 leading-relaxed">
-                Clovo Solutions (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) respects your
-                privacy and is committed to protecting the personal data you
-                share with us. This Privacy Policy explains what information we
-                collect, how we use it, and what rights you have in relation to
-                it.
+                Clovo Solutions (&quot;we&quot;, &quot;us&quot;, or
+                &quot;our&quot;) respects your privacy and is committed to
+                protecting the personal data you share with us. This Privacy
+                Policy explains what information we collect, how we use it, and
+                what rights you have in relation to it.
               </p>
               <p className="text-white/40 leading-relaxed">
                 This policy applies to our website{" "}
-                <span className="text-accent/60">clovosolutions.com</span> and
+                <span className="text-accent/60">clovo-solutions.com</span> and
                 any services we provide.
               </p>
             </div>
@@ -86,8 +85,8 @@ function PrivacyContent() {
                       Booking data
                     </span>{" "}
                     — scheduling information when you use our integrated booking
-                    tool (e.g., Calendly), which is processed by the
-                    third-party provider.
+                    tool (e.g., Calendly), which is processed by the third-party
+                    provider.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
@@ -168,8 +167,8 @@ function PrivacyContent() {
                     <span className="text-white/60 font-medium">
                       Google Fonts
                     </span>{" "}
-                    — fonts are loaded from Google&apos;s CDN, which may log your
-                    IP address per Google&apos;s privacy policy.
+                    — fonts are loaded from Google&apos;s CDN, which may log
+                    your IP address per Google&apos;s privacy policy.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
