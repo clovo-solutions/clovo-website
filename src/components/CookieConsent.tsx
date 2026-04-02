@@ -23,8 +23,7 @@ export default function CookieConsent() {
   const handleAccept = () => {
     localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
     setVisible(false);
-    // If you add analytics later, initialize them here:
-    // e.g. initGoogleAnalytics();
+    window.dispatchEvent(new Event("storage"));
   };
 
   const handleDecline = () => {
@@ -70,9 +69,10 @@ export default function CookieConsent() {
               {/* Text */}
               <div className="flex-1 min-w-0">
                 <p className="text-sm text-white/50 leading-relaxed">
-                  We use essential third-party services (fonts, booking tools)
-                  that may process basic data. No tracking or advertising
-                  cookies are used.{" "}
+                  We use cookies and third-party services (Google Analytics,
+                  fonts, booking tools) to improve your experience and
+                  understand how our site is used. Analytics only activate after
+                  you consent.{" "}
                   <Link
                     href="/privacy"
                     className="text-accent/60 hover:text-accent underline underline-offset-2 transition-colors"

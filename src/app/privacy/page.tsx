@@ -175,10 +175,22 @@ function PrivacyContent() {
                   <span className="w-1.5 h-1.5 rounded-full bg-accent/40 mt-2 flex-shrink-0" />
                   <p className="text-white/40 text-sm">
                     <span className="text-white/60 font-medium">
-                      Analytics (if enabled)
+                      Google Analytics
                     </span>{" "}
-                    — if we add analytics in the future, we will update this
-                    policy and request your consent before any tracking begins.
+                    — we use Google Analytics to collect anonymized data about
+                    how visitors interact with our site (pages visited, time on
+                    site, traffic sources). This service is only activated after
+                    you provide consent via our cookie banner. Google may
+                    process this data on servers outside the EU. For details,
+                    see{" "}
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent/50 hover:text-accent underline underline-offset-2 transition-colors"
+                    >
+                      Google&apos;s Privacy Policy
+                    </a>
                   </p>
                 </div>
               </div>

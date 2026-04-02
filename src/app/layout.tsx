@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import CookieConsent from "@/components/CookieConsent";
 import StructuredData from "@/components/StructuredData";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const BASE_URL = "https://clovo-solutions.com";
 
@@ -118,6 +119,7 @@ export default function RootLayout({
     <html lang="en" className="dark overflow-x-hidden">
       <body className="noise-overlay bg-dark-900 text-white antialiased overflow-x-hidden">
         <StructuredData />
+        <GoogleAnalytics />
         <div className="overflow-hidden w-full">{children}</div>
         <CookieConsent />
       </body>
