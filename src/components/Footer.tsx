@@ -55,7 +55,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3">
               {/* Social icons placeholder */}
-              {["X", "Li", "Ig"].map((label) => (
+              {/* {["X", "Li", "Ig"].map((label) => (
                 <a
                   key={label}
                   href="#"
@@ -63,7 +63,7 @@ export default function Footer() {
                 >
                   {label}
                 </a>
-              ))}
+              ))} */}
             </div>
           </div>
 
