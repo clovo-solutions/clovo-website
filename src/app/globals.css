@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+section[id] {
+  scroll-margin-top: 96px;
+}
+
 :root {
   --font-cabinet: "Sora", system-ui, sans-serif;
   --font-general: "DM Sans", system-ui, sans-serif;
@@ -108,4 +112,10 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 128px 128px;
+}
+
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 88px;
+  }
 }
