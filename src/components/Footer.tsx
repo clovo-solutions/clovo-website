@@ -49,9 +49,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-sm text-white/25 leading-relaxed max-w-xs mb-6">
-              We build digital systems that bring you clients on autopilot.
-              Websites, bookings, automations — everything a modern business
-              needs to grow.
+              We build digital systems that help you bring in clients
+              consistently. From websites to bookings and automations,
+              everything is designed to support your growth.
             </p>
             <div className="flex items-center gap-3">
               {/* Social icons placeholder */}

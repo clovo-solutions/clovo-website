@@ -65,9 +65,9 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="text-lg sm:text-xl text-white/40 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
         >
-          High-converting websites, automated bookings, and seamless calendar
-          sync — so you can focus on what you do best while we handle the
-          growth.
+          High-converting websites and smart systems that help you bring in
+          clients, so you can focus on your work while everything else runs
+          smoothly.
         </motion.p>
 
         {/* CTAs */}

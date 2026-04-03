@@ -14,21 +14,24 @@ const steps = [
     number: "02",
     title: "Build & Launch",
     description:
-      "Our team designs and develops your digital ecosystem — website, booking flows, automations — tailored to your brand and ready to convert.",
+      "Our team designs and builds your digital ecosystem, including your website, booking flows, and automations, all tailored to your brand and built to convert.",
     detail: "Delivered in 2–4 weeks",
   },
   {
     number: "03",
     title: "Grow on Autopilot",
     description:
-      "Your systems are live. Clients book themselves, calendars sync, and leads flow in automatically. You focus on delivering — we handle the rest.",
+      "Once everything is live, clients can book on their own, your systems stay in sync, and new leads come in consistently. You can focus on your work while everything else runs in the background.",
     detail: "Ongoing support included",
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="relative py-28 sm:py-36 overflow-hidden">
+    <section
+      id="how-it-works"
+      className="relative py-28 sm:py-36 overflow-hidden"
+    >
       {/* Subtle divider */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
 
@@ -42,8 +45,8 @@ export default function HowItWorks() {
             <span className="gradient-text">Effortless Growth</span>
           </h2>
           <p className="text-white/35 text-lg max-w-xl mx-auto">
-            No complexity, no jargon — just a clear path from where you are now
-            to where you want to be.
+            No complexity and no jargon. Just a clear path from where you are
+            now to where you want to be.
           </p>
         </AnimatedSection>
 

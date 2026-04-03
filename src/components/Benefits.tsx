@@ -61,8 +61,8 @@ export default function Benefits() {
             Built for <span className="gradient-text">Measurable Impact</span>
           </h2>
           <p className="text-white/35 text-lg max-w-xl mx-auto">
-            We don’t build websites — we build systems that generate results you
-            can actually measure.
+            We do not just build websites. We create systems that generate
+            results you can actually measure.
           </p>
         </AnimatedSection>
 

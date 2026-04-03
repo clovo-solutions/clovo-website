@@ -31,9 +31,9 @@ export default function Contact() {
                 </span>
               </h2>
               <p className="text-white/35 text-base leading-relaxed mb-8 max-w-md">
-                Book a free 30-minute strategy call. We&apos;ll map out exactly
-                how to automate your client acquisition and scale your business
-                — no obligations, no pressure.
+                Book a free 30-minute strategy call. We will map out how to
+                automate your client acquisition and help you scale your
+                business, with no obligations or pressure.
               </p>
 
               {/* Quick benefits */}
