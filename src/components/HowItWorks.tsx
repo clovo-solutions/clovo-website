@@ -15,7 +15,7 @@ const steps = [
     title: "Build & Launch",
     description:
       "Our team designs and builds your digital ecosystem, including your website, booking flows, and automations, all tailored to your brand and built to convert.",
-    detail: "Delivered in 2–4 weeks",
+    detail: "Delivered in 1–4 weeks",
   },
   {
     number: "03",
