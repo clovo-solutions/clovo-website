@@ -96,6 +96,8 @@ export default function Navbar() {
 
   return (
     <>
+      {/* iOS status bar background fill */}
+      <div className="fixed top-0 left-0 right-0 z-50 h-[env(safe-area-inset-top)] bg-[#050505]" />
       <motion.header
         initial={{ y: -100 }}
         animate={{ y: 0 }}
