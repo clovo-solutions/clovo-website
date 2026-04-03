@@ -7,9 +7,10 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 const BASE_URL = "https://clovo-solutions.com";
 
 export const viewport: Viewport = {
-  themeColor: "#01D957",
+  themeColor: "#050505",
   width: "device-width",
   initialScale: 1,
+  viewportFit: "cover",
 };
 
 export const metadata: Metadata = {
@@ -116,7 +117,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark overflow-x-hidden">
+    <html
+      lang="en"
+      className="dark overflow-x-hidden"
+      style={{ backgroundColor: "#050505" }}
+    >
       <body className="noise-overlay bg-dark-900 text-white antialiased overflow-x-hidden">
         <StructuredData />
         <GoogleAnalytics />
