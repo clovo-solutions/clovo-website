@@ -243,8 +243,23 @@ export default function Navbar() {
               {/* Decorative accent line on left edge */}
               <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-accent/20 via-accent/5 to-transparent" />
 
-              {/* Drawer header spacer */}
-              <div className="h-20 flex-shrink-0" />
+              {/* Drawer header */}
+              <div className="h-20 flex-shrink-0 flex items-center justify-end px-6">
+                <button
+                  onClick={() => setMobileOpen(false)}
+                  className="w-10 h-10 flex items-center justify-center rounded-xl bg-white/[0.04] border border-white/[0.06] hover:bg-white/[0.08] transition-colors"
+                  aria-label="Close menu"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M12 4L4 12M4 4l8 8"
+                      stroke="white"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
 
               {/* Links */}
               <div className="flex-1 flex flex-col justify-center px-8">
