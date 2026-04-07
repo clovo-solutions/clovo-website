@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ContactCta from "@/components/ContactCta";
 
 const services = [
   {
@@ -171,7 +172,6 @@ export default function WebDesignLimassolContent() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent/[0.03] rounded-full blur-[150px]" />
 
       <div className="relative max-w-3xl mx-auto px-6 lg:px-8">
-        {/* ── Hero ── */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             Limassol, Cyprus
@@ -200,10 +200,7 @@ export default function WebDesignLimassolContent() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="/#contact"
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-            >
+            <ContactCta className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
               Get a Free Audit
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
@@ -214,7 +211,7 @@ export default function WebDesignLimassolContent() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </ContactCta>
             <Link
               href="/website-cost-cyprus"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/[0.08] text-white/60 text-base font-medium hover:border-white/20 hover:text-white/80 transition-all duration-300"
@@ -224,7 +221,6 @@ export default function WebDesignLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Trust Bar */}
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/25 mb-16 py-6 border-y border-white/[0.04]">
           <div className="flex items-center gap-2">
             <div className="flex -space-x-2">
@@ -264,10 +260,8 @@ export default function WebDesignLimassolContent() {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* ── Services ── */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             What We Do
@@ -287,7 +281,6 @@ export default function WebDesignLimassolContent() {
             </Link>{" "}
             works under the hood.
           </p>
-
           <div className="space-y-6">
             {services.map((service, i) => (
               <div
@@ -305,10 +298,8 @@ export default function WebDesignLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* ── Process ── */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             How It Works
@@ -320,7 +311,6 @@ export default function WebDesignLimassolContent() {
             A clear, four-step process that keeps you informed and in control at
             every stage. No surprises, no scope creep.
           </p>
-
           <div className="space-y-8">
             {processSteps.map((step) => (
               <div key={step.num} className="flex gap-6">
@@ -338,12 +328,8 @@ export default function WebDesignLimassolContent() {
               </div>
             ))}
           </div>
-
           <div className="mt-12">
-            <a
-              href="/#contact"
-              className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-            >
+            <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
               Start With a Free Discovery Call
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
@@ -354,14 +340,12 @@ export default function WebDesignLimassolContent() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </ContactCta>
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* ── Case Studies ── */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             Results
@@ -369,7 +353,6 @@ export default function WebDesignLimassolContent() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-10">
             Limassol Businesses We&apos;ve Helped Grow
           </h2>
-
           <div className="space-y-8">
             {caseStudies.map((study, i) => (
               <div
@@ -408,10 +391,8 @@ export default function WebDesignLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* ── Pricing ── */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             Pricing
@@ -423,7 +404,6 @@ export default function WebDesignLimassolContent() {
             Transparent pricing with no hidden fees. Every package includes
             mobile-responsive design, SEO setup, and post-launch support.
           </p>
-
           <div className="space-y-4">
             {pricingTiers.map((plan, i) => (
               <div
@@ -457,7 +437,6 @@ export default function WebDesignLimassolContent() {
                     )}
                   </span>
                 </div>
-
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2.5">
@@ -483,7 +462,6 @@ export default function WebDesignLimassolContent() {
               </div>
             ))}
           </div>
-
           <p className="text-sm text-white/25 mt-6 leading-relaxed">
             Need something custom?{" "}
             <Link
@@ -495,10 +473,8 @@ export default function WebDesignLimassolContent() {
           </p>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* ── FAQ ── */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             FAQ
@@ -506,7 +482,6 @@ export default function WebDesignLimassolContent() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-10">
             Common Questions About Web Design in Limassol
           </h2>
-
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div
@@ -530,10 +505,8 @@ export default function WebDesignLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* ── Related Pages ── */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
           <Link
             href="/web-development-limassol"
@@ -570,14 +543,11 @@ export default function WebDesignLimassolContent() {
           </Link>
         </div>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* ── Final CTA ── */}
         <AnimatedSection>
           <div className="relative p-8 sm:p-12 rounded-2xl border border-white/[0.04] bg-white/[0.01] text-center overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-accent/[0.03] rounded-full blur-[120px] -translate-y-1/2" />
-
             <div className="relative z-10">
               <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white mb-4">
                 Ready for a Website That Actually Works?
@@ -587,10 +557,7 @@ export default function WebDesignLimassolContent() {
                 outdated websites. Get a free audit and see exactly what&apos;s
                 holding your site back.
               </p>
-              <a
-                href="/#contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-              >
+              <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
                 Get Your Free Website Audit
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path
@@ -601,7 +568,7 @@ export default function WebDesignLimassolContent() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </ContactCta>
               <p className="text-xs text-white/20 mt-6">
                 No commitment required. Just honest feedback on your website.
               </p>
@@ -609,7 +576,6 @@ export default function WebDesignLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Back link */}
         <div className="mt-12 pt-6 border-t border-white/[0.04]">
           <Link
             href="/"
@@ -620,7 +586,6 @@ export default function WebDesignLimassolContent() {
         </div>
       </div>
 
-      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -630,16 +595,11 @@ export default function WebDesignLimassolContent() {
             mainEntity: faqs.map((faq) => ({
               "@type": "Question",
               name: faq.q,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.a,
-              },
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
             })),
           }),
         }}
       />
-
-      {/* Local Business Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

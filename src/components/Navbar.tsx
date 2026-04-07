@@ -57,17 +57,25 @@ export default function Navbar() {
     setMobileOpen(false);
 
     if (pathname === "/") {
-      setTimeout(() => {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        history.replaceState(null, "", `/#${sectionId}`);
+      }
+    } else {
+      router.push("/");
+      const waitAndScroll = () => {
         const el = document.getElementById(sectionId);
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
+          history.replaceState(null, "", `/#${sectionId}`);
+        } else {
+          requestAnimationFrame(waitAndScroll);
         }
-      }, 300);
-    } else {
-      router.push(`/#${sectionId}`);
+      };
+      setTimeout(waitAndScroll, 100);
     }
   };
-
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
     setMobileOpen(false);
@@ -83,14 +91,23 @@ export default function Navbar() {
     setMobileOpen(false);
 
     if (pathname === "/") {
-      setTimeout(() => {
+      const el = document.getElementById("contact");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+        history.replaceState(null, "", "/#contact");
+      }
+    } else {
+      router.push("/");
+      const waitAndScroll = () => {
         const el = document.getElementById("contact");
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
+          history.replaceState(null, "", "/#contact");
+        } else {
+          requestAnimationFrame(waitAndScroll);
         }
-      }, 300);
-    } else {
-      router.push("/#contact");
+      };
+      setTimeout(waitAndScroll, 100);
     }
   };
 

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ContactCta from "@/components/ContactCta";
 
 const services = [
   {
@@ -214,10 +215,7 @@ export default function WebDesignCyprusContent() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="/#contact"
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-            >
+            <ContactCta className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
               Book a Free Strategy Call
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
@@ -228,7 +226,7 @@ export default function WebDesignCyprusContent() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </ContactCta>
             <Link
               href="/website-cost-cyprus"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/[0.08] text-white/60 text-base font-medium hover:border-white/20 hover:text-white/80 transition-all duration-300"
@@ -278,7 +276,6 @@ export default function WebDesignCyprusContent() {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
         {/* ── Services ── */}
@@ -320,7 +317,6 @@ export default function WebDesignCyprusContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
         {/* ── Why Us ── */}
@@ -345,7 +341,6 @@ export default function WebDesignCyprusContent() {
                 between a brochure and a business tool.
               </p>
             </div>
-
             <div className="space-y-4">
               <h3 className="font-display text-xl font-semibold text-white">
                 We use modern technology, not five-year-old templates
@@ -359,7 +354,6 @@ export default function WebDesignCyprusContent() {
                 what theirs is.
               </p>
             </div>
-
             <div className="space-y-4">
               <h3 className="font-display text-xl font-semibold text-white">
                 You get a complete system, not just some pages
@@ -372,7 +366,6 @@ export default function WebDesignCyprusContent() {
                 being the engine behind your client acquisition.
               </p>
             </div>
-
             <div className="space-y-4">
               <h3 className="font-display text-xl font-semibold text-white">
                 Fixed pricing, fast timelines, no games
@@ -394,7 +387,6 @@ export default function WebDesignCyprusContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
         {/* ── Process ── */}
@@ -429,10 +421,7 @@ export default function WebDesignCyprusContent() {
           </div>
 
           <div className="mt-12">
-            <a
-              href="/#contact"
-              className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-            >
+            <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
               Start With a Free Call
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
@@ -443,11 +432,10 @@ export default function WebDesignCyprusContent() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </ContactCta>
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
         {/* ── Case Studies ── */}
@@ -507,7 +495,6 @@ export default function WebDesignCyprusContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
         {/* ── Pricing ── */}
@@ -557,7 +544,6 @@ export default function WebDesignCyprusContent() {
                     )}
                   </span>
                 </div>
-
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2.5">
@@ -596,10 +582,9 @@ export default function WebDesignCyprusContent() {
           </p>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* ── Cities We Serve ── */}
+        {/* ── Cities ── */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             Where We Work
@@ -650,7 +635,6 @@ export default function WebDesignCyprusContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
         {/* ── FAQ ── */}
@@ -685,7 +669,6 @@ export default function WebDesignCyprusContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
         {/* ── Related Pages ── */}
@@ -725,14 +708,12 @@ export default function WebDesignCyprusContent() {
           </Link>
         </div>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
         {/* ── Final CTA ── */}
         <AnimatedSection>
           <div className="relative p-8 sm:p-12 rounded-2xl border border-white/[0.04] bg-white/[0.01] text-center overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-accent/[0.03] rounded-full blur-[120px] -translate-y-1/2" />
-
             <div className="relative z-10">
               <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white mb-4">
                 Let's Build Something That Works
@@ -743,10 +724,7 @@ export default function WebDesignCyprusContent() {
                 recommendation. If we're a good fit, great. If not, you'll still
                 walk away with useful feedback.
               </p>
-              <a
-                href="/#contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-              >
+              <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
                 Book Your Free Call
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path
@@ -757,7 +735,7 @@ export default function WebDesignCyprusContent() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </ContactCta>
               <p className="text-xs text-white/20 mt-6">
                 No commitment. No awkward sales pitch. Just a conversation.
               </p>
@@ -765,7 +743,6 @@ export default function WebDesignCyprusContent() {
           </div>
         </AnimatedSection>
 
-        {/* Back link */}
         <div className="mt-12 pt-6 border-t border-white/[0.04]">
           <Link
             href="/"
@@ -776,7 +753,6 @@ export default function WebDesignCyprusContent() {
         </div>
       </div>
 
-      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -786,16 +762,11 @@ export default function WebDesignCyprusContent() {
             mainEntity: faqs.map((faq) => ({
               "@type": "Question",
               name: faq.q,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.a,
-              },
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
             })),
           }),
         }}
       />
-
-      {/* Local Business Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import AnimatedSection from "@/components/AnimatedSection";
+import ContactCta from "@/components/ContactCta";
 
 const faqs = [
   {
@@ -42,7 +43,6 @@ export default function WebDevLimassolContent() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent/[0.03] rounded-full blur-[150px]" />
 
       <div className="relative max-w-3xl mx-auto px-6 lg:px-8">
-        {/* Hero / Intro */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             Limassol, Cyprus
@@ -71,11 +71,7 @@ export default function WebDevLimassolContent() {
             we do it.
           </p>
 
-          {/* CTA 1 */}
-          <a
-            href="/#contact"
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-          >
+          <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
             Book a Free Strategy Call
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
@@ -86,13 +82,11 @@ export default function WebDevLimassolContent() {
                 strokeLinejoin="round"
               />
             </svg>
-          </a>
+          </ContactCta>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* Services Section */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             What We Build
@@ -105,7 +99,6 @@ export default function WebDevLimassolContent() {
             around your business, your audience, and the specific actions you
             want visitors to take. Here&apos;s what that includes:
           </p>
-
           <div className="space-y-6">
             {[
               {
@@ -114,7 +107,7 @@ export default function WebDevLimassolContent() {
               },
               {
                 title: "High-Performance Development",
-                desc: "Built with Next.js and React for speed, security, and SEO performance. Our sites consistently score 90+ on Google PageSpeed, which means faster load times, lower bounce rates, and better search rankings than the WordPress sites most Limassol agencies deliver.",
+                desc: "Built with Next.js and React for speed, security, and SEO performance. Our sites consistently score 95+ on Google PageSpeed, which means faster load times, lower bounce rates, and better search rankings than the WordPress sites most Limassol agencies deliver.",
               },
               {
                 title: "Booking System Integration",
@@ -148,10 +141,8 @@ export default function WebDevLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* Process Section */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             How It Works
@@ -163,7 +154,6 @@ export default function WebDevLimassolContent() {
             We keep the process simple, transparent, and fast. No bloated
             timelines, no unnecessary meetings. Here&apos;s what to expect:
           </p>
-
           <div className="space-y-8">
             {[
               {
@@ -202,13 +192,8 @@ export default function WebDevLimassolContent() {
               </div>
             ))}
           </div>
-
-          {/* CTA 2 */}
           <div className="mt-12">
-            <a
-              href="/#contact"
-              className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-            >
+            <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
               Start With a Free Discovery Call
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
@@ -219,14 +204,12 @@ export default function WebDevLimassolContent() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </ContactCta>
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* Why Choose Us */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             Why Clovo
@@ -234,7 +217,6 @@ export default function WebDevLimassolContent() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-6">
             What Makes Us Different From Other Website Designers in Cyprus
           </h2>
-
           <div className="space-y-6">
             <div className="space-y-4">
               <h3 className="font-display text-xl font-semibold text-white">
@@ -249,7 +231,6 @@ export default function WebDevLimassolContent() {
                 of launch.
               </p>
             </div>
-
             <div className="space-y-4">
               <h3 className="font-display text-xl font-semibold text-white">
                 Modern technology, not outdated templates
@@ -263,7 +244,6 @@ export default function WebDevLimassolContent() {
                 Ask your current agency what theirs is.
               </p>
             </div>
-
             <div className="space-y-4">
               <h3 className="font-display text-xl font-semibold text-white">
                 Complete systems, not just pages
@@ -276,7 +256,6 @@ export default function WebDevLimassolContent() {
                 that drives client acquisition and not just a digital brochure.
               </p>
             </div>
-
             <div className="space-y-4">
               <h3 className="font-display text-xl font-semibold text-white">
                 Transparent pricing and fast delivery
@@ -291,10 +270,8 @@ export default function WebDevLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* Case Studies */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             Results
@@ -302,7 +279,6 @@ export default function WebDevLimassolContent() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-10">
             What This Looks Like in Practice
           </h2>
-
           <div className="space-y-8">
             <div className="p-8 rounded-2xl border border-white/[0.04] bg-white/[0.01]">
               <span className="inline-block text-[10px] font-mono text-accent/50 tracking-[0.15em] uppercase mb-4">
@@ -339,7 +315,6 @@ export default function WebDevLimassolContent() {
                 </div>
               </div>
             </div>
-
             <div className="p-8 rounded-2xl border border-white/[0.04] bg-white/[0.01]">
               <span className="inline-block text-[10px] font-mono text-accent/50 tracking-[0.15em] uppercase mb-4">
                 Professional Services Firm — Limassol
@@ -377,10 +352,8 @@ export default function WebDevLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* Pricing Guidance */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             Investment
@@ -393,7 +366,6 @@ export default function WebDevLimassolContent() {
             here&apos;s a realistic guide so you know what to expect before we
             speak:
           </p>
-
           <div className="space-y-4">
             <div className="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.01] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
@@ -436,7 +408,6 @@ export default function WebDevLimassolContent() {
               </span>
             </div>
           </div>
-
           <p className="text-sm text-white/25 mt-6 leading-relaxed">
             All pricing is project-based with a fixed quote and no hourly
             billing, no surprise fees. 50% deposit to start, balance on
@@ -444,10 +415,8 @@ export default function WebDevLimassolContent() {
           </p>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* FAQ */}
         <AnimatedSection className="mb-16">
           <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-4">
             FAQ
@@ -455,7 +424,6 @@ export default function WebDevLimassolContent() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-white mb-10">
             Common Questions About Web Development in Limassol
           </h2>
-
           <div className="space-y-6">
             {faqs.map((faq, i) => (
               <div
@@ -471,14 +439,11 @@ export default function WebDevLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent my-16" />
 
-        {/* Final CTA */}
         <AnimatedSection>
           <div className="relative p-8 sm:p-12 rounded-2xl border border-white/[0.04] bg-white/[0.01] text-center overflow-hidden">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-accent/[0.03] rounded-full blur-[120px] -translate-y-1/2" />
-
             <div className="relative z-10">
               <h2 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white mb-4">
                 Ready to Build a Website That Actually Works?
@@ -489,10 +454,7 @@ export default function WebDevLimassolContent() {
                 exactly what it would take to start generating leads through
                 your website. No commitment, no pressure.
               </p>
-              <a
-                href="/#contact"
-                className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
-              >
+              <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
                 Book Your Free Call
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path
@@ -503,7 +465,7 @@ export default function WebDevLimassolContent() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </ContactCta>
               <p className="text-xs text-white/20 mt-6">
                 No commitment required. We&apos;ll give you an honest assessment
                 even if we&apos;re not the right fit.
@@ -512,7 +474,6 @@ export default function WebDevLimassolContent() {
           </div>
         </AnimatedSection>
 
-        {/* Back link */}
         <div className="mt-12 pt-6 border-t border-white/[0.04]">
           <Link
             href="/"
@@ -523,7 +484,6 @@ export default function WebDevLimassolContent() {
         </div>
       </div>
 
-      {/* FAQ Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -533,16 +493,11 @@ export default function WebDevLimassolContent() {
             mainEntity: faqs.map((faq) => ({
               "@type": "Question",
               name: faq.q,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.a,
-              },
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
             })),
           }),
         }}
       />
-
-      {/* Local Business Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -554,14 +509,8 @@ export default function WebDevLimassolContent() {
               "Website development company in Limassol, Cyprus. Custom web design, SEO, booking system integration, and business automation.",
             url: "https://clovo-solutions.com/web-development-limassol",
             areaServed: [
-              {
-                "@type": "City",
-                name: "Limassol",
-              },
-              {
-                "@type": "Country",
-                name: "Cyprus",
-              },
+              { "@type": "City", name: "Limassol" },
+              { "@type": "Country", name: "Cyprus" },
             ],
             serviceType: [
               "Website Development",
