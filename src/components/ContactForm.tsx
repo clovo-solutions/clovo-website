@@ -45,13 +45,11 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
   const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
   const formRef = useRef<HTMLDivElement>(null);
 
-  // Load reCAPTCHA v3 script
-  useEffect(() => {
-    if (!RECAPTCHA_SITE_KEY) {
-      console.warn("Missing NEXT_PUBLIC_RECAPTCHA_SITE_KEY");
-      return;
-    }
+  // Remove the useEffect that loads reCAPTCHA on mount entirely.
+  // Instead, load it lazily when user focuses any field:
 
+  const loadRecaptcha = useCallback(() => {
+    if (!RECAPTCHA_SITE_KEY || recaptchaLoaded) return;
     if (document.querySelector(`script[src*="recaptcha"]`)) {
       setRecaptchaLoaded(true);
       return;
@@ -62,7 +60,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
     script.async = true;
     script.onload = () => setRecaptchaLoaded(true);
     document.head.appendChild(script);
-  }, []);
+  }, [recaptchaLoaded]);
 
   const getRecaptchaToken = useCallback(async (): Promise<string | null> => {
     if (!RECAPTCHA_SITE_KEY || !recaptchaLoaded) return null;
@@ -292,6 +290,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                     type="text"
                     value={formData.name}
                     onChange={handleChange}
+                    onFocus={loadRecaptcha}
                     placeholder={t.namePlaceholder}
                     autoComplete="name"
                     className={`w-full px-4 py-3 rounded-xl bg-white/[0.03] border text-white text-sm placeholder:text-white/15 focus:outline-none focus:ring-1 transition-all duration-300 ${
@@ -318,6 +317,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                     id="contact-email"
                     name="email"
                     type="email"
+                    onFocus={loadRecaptcha}
                     value={formData.email}
                     onChange={handleChange}
                     placeholder={t.emailPlaceholder}
@@ -353,6 +353,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
+                  onFocus={loadRecaptcha}
                   placeholder={t.phonePlaceholder}
                   autoComplete="tel"
                   className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.06] text-white text-sm placeholder:text-white/15 focus:outline-none focus:border-accent/30 focus:ring-1 focus:ring-accent/10 transition-all duration-300"
@@ -373,6 +374,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
+                  onFocus={loadRecaptcha}
                   placeholder={t.messagePlaceholder}
                   className={`w-full px-4 py-3 rounded-xl bg-white/[0.03] border text-white text-sm placeholder:text-white/15 focus:outline-none focus:ring-1 transition-all duration-300 resize-none ${
                     errors.message
@@ -408,6 +410,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       name="consentCommunications"
                       checked={formData.consentCommunications}
                       onChange={handleChange}
+                      onFocus={loadRecaptcha}
                       className="sr-only peer"
                     />
                     <div className="w-4 h-4 rounded border border-white/10 bg-white/[0.03] peer-checked:bg-accent/20 peer-checked:border-accent/40 transition-all duration-200 flex items-center justify-center group-hover:border-white/20">
@@ -443,6 +446,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       name="consentProcessing"
                       checked={formData.consentProcessing}
                       onChange={handleChange}
+                      onFocus={loadRecaptcha}
                       className="sr-only peer"
                     />
                     <div
