@@ -14,21 +14,69 @@ export default function Hero() {
       <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-accent/[0.03] rounded-full blur-[100px]" />
 
       {/* Floating orbs */}
-      <motion.div
-        animate={{ y: [-20, 20, -20], x: [-10, 10, -10] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[20%] left-[15%] w-2 h-2 bg-accent/40 rounded-full blur-[1px]"
-      />
-      <motion.div
-        animate={{ y: [15, -15, 15], x: [10, -10, 10] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-[30%] right-[20%] w-3 h-3 bg-accent/30 rounded-full blur-[2px]"
-      />
-      <motion.div
-        animate={{ y: [-10, 15, -10] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[40%] right-[10%] w-1.5 h-1.5 bg-accent/50 rounded-full"
-      />
+      {[
+        // LEFT SIDE
+        {
+          className: "top-[20%] left-[10%] w-2 h-2 bg-accent/40 blur-[1px]",
+          anim: { y: [-20, 20, -20], x: [-10, 10, -10] },
+          duration: 8,
+        },
+        {
+          className: "top-[35%] left-[5%] w-1.5 h-1.5 bg-accent/50",
+          anim: { y: [-15, 10, -15], x: [-5, 5, -5] },
+          duration: 7,
+        },
+        {
+          className: "bottom-[25%] left-[15%] w-3 h-3 bg-accent/30 blur-[2px]",
+          anim: { y: [10, -15, 10], x: [8, -8, 8] },
+          duration: 10,
+        },
+        {
+          className: "top-[50%] left-[20%] w-1 h-1 bg-accent/60",
+          anim: { y: [-8, 12, -8] },
+          duration: 6,
+        },
+
+        // RIGHT SIDE
+        {
+          className: "bottom-[30%] right-[20%] w-3 h-3 bg-accent/30 blur-[2px]",
+          anim: { y: [15, -15, 15], x: [10, -10, 10] },
+          duration: 10,
+        },
+        {
+          className: "top-[40%] right-[10%] w-1.5 h-1.5 bg-accent/50",
+          anim: { y: [-10, 15, -10] },
+          duration: 7,
+        },
+        {
+          className: "top-[25%] right-[15%] w-2 h-2 bg-accent/40 blur-[1px]",
+          anim: { y: [-12, 18, -12], x: [-6, 6, -6] },
+          duration: 9,
+        },
+
+        // CENTER FLOATERS (subtle depth)
+        {
+          className: "top-[60%] left-[45%] w-1.5 h-1.5 bg-accent/40",
+          anim: { y: [-10, 10, -10] },
+          duration: 8,
+        },
+        {
+          className: "top-[30%] left-[55%] w-1 h-1 bg-accent/50",
+          anim: { y: [8, -8, 8] },
+          duration: 6,
+        },
+      ].map((orb, i) => (
+        <motion.div
+          key={i}
+          animate={{ ...orb.anim, opacity: [0.4, 1, 0.4] }}
+          transition={{
+            duration: orb.duration + Math.random() * 2,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className={`absolute rounded-full ${orb.className}`}
+        />
+      ))}
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20 sm:pt-0">
