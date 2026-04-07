@@ -8,6 +8,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 import ClovoCarousel from "@/components/ClovoCarousel";
+import SeoPages from "@/components/SeoPages";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Testimonials />
         {/* <ClovoCarousel /> */}
         <Contact />
+        <SeoPages />
       </main>
       <Footer />
     </>
