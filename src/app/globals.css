@@ -7,9 +7,6 @@ section[id] {
 }
 
 :root {
-  --font-cabinet: "Sora", system-ui, sans-serif;
-  --font-general: "DM Sans", system-ui, sans-serif;
-  --font-jetbrains: "JetBrains Mono", monospace;
   --accent: #01d957;
   --accent-rgb: 1, 217, 87;
 }
@@ -30,7 +27,7 @@ html {
 body {
   background-color: #050505;
   color: #e0e0e0;
-  font-family: var(--font-general);
+  font-family: var(--font-general), system-ui, sans-serif;
   overflow-x: hidden;
   width: 100%;
   position: relative;
@@ -84,7 +81,7 @@ body {
   }
 }
 
-/* Hero entrance animations (CSS-only, no initial hidden state) */
+/* Hero entrance animations */
 @keyframes heroFadeUp {
   from {
     opacity: 0;

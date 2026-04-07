@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
@@ -26,7 +24,7 @@ module.exports = {
       },
       animation: {
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
-        "float": "float 6s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
         "grid-fade": "grid-fade 4s ease-in-out infinite",
       },
       keyframes: {
@@ -34,7 +32,7 @@ module.exports = {
           "0%, 100%": { opacity: "0.4" },
           "50%": { opacity: "0.8" },
         },
-        "float": {
+        float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
         },

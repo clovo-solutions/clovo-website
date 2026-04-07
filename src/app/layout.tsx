@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { sora, dmSans, jetbrainsMono } from "./fonts";
 import CookieConsent from "@/components/CookieConsent";
 import StructuredData from "@/components/StructuredData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
@@ -105,22 +106,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="dark overflow-x-hidden"
+      className={`dark overflow-x-hidden ${sora.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
       style={{ backgroundColor: "#050505" }}
     >
       <head>
-        {/* Preconnect to Google Fonts for faster loading */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        {/* Single combined font request instead of 3 separate @imports */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         <StructuredData />
       </head>
       <body className="noise-overlay bg-dark-900 text-white antialiased overflow-x-hidden">

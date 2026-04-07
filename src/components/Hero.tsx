@@ -32,45 +32,50 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-20 sm:pt-0">
-        {/* Badge - CSS animation, no initial hidden state */}
-        <div
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/[0.06] mb-8"
-          style={{
-            animation: "heroFadeUp 0.6s ease-out 0.2s both",
-          }}
         >
           <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
           <span className="text-xs font-mono text-accent/80 tracking-wider uppercase">
             Automating Business Growth
           </span>
-        </div>
+        </motion.div>
 
-        {/* Headline - NO animation, fully visible immediately for LCP */}
-        <h1 className="font-display text-5xl sm:text-6xl lg:text-[5.2rem] font-bold leading-[1.05] tracking-tight mb-6">
+        {/* Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.35 }}
+          className="font-display text-5xl sm:text-6xl lg:text-[5.2rem] font-bold leading-[1.05] tracking-tight mb-6"
+        >
           <span className="text-white">We Build Systems</span>
           <br />
           <span className="text-white">That Bring You </span>
           <span className="gradient-text text-glow">Clients</span>
-        </h1>
+        </motion.h1>
 
-        {/* Subheadline - CSS animation */}
-        <p
+        {/* Subheadline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
           className="text-lg sm:text-xl text-white/40 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
-          style={{
-            animation: "heroFadeUp 0.7s ease-out 0.3s both",
-          }}
         >
           High-converting websites and smart systems that help you bring in
           clients, so you can focus on your work while everything else runs
           smoothly.
-        </p>
+        </motion.p>
 
-        {/* CTAs - CSS animation */}
-        <div
+        {/* CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.65 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          style={{
-            animation: "heroFadeUp 0.7s ease-out 0.45s both",
-          }}
         >
           <Link
             href="#contact"
@@ -108,14 +113,14 @@ export default function Hero() {
               />
             </svg>
           </Link>
-        </div>
+        </motion.div>
 
-        {/* Social Proof strip - CSS animation */}
-        <div
+        {/* Social Proof strip */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
           className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 text-sm text-white/25"
-          style={{
-            animation: "heroFadeIn 1s ease-out 0.8s both",
-          }}
         >
           <div className="flex items-center gap-2">
             <div className="flex -space-x-2">
@@ -153,7 +158,7 @@ export default function Hero() {
             </div>
             <span>4.9 average rating</span>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom fade */}
