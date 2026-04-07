@@ -38,12 +38,10 @@ export const metadata: Metadata = {
     "Cyprus digital agency",
   ],
 
-  // Canonical
   alternates: {
     canonical: BASE_URL,
   },
 
-  // Open Graph
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -62,17 +60,14 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Twitter
   twitter: {
     card: "summary_large_image",
     title: "Clovo Solutions | Digital Growth for Modern Businesses",
     description:
       "Build high-converting websites, automate bookings, and grow your business on autopilot.",
     images: ["/og-image.png"],
-    // creator: "@clovosolutions", // Uncomment when you have a Twitter handle
   },
 
-  // Favicons & App Icons
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "32x32" },
@@ -83,10 +78,8 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 
-  // Manifest
   manifest: "/manifest.webmanifest",
 
-  // Robots
   robots: {
     index: true,
     follow: true,
@@ -99,13 +92,6 @@ export const metadata: Metadata = {
     },
   },
 
-  // Verification — fill these in after registering
-  // verification: {
-  //   google: "YOUR_GOOGLE_VERIFICATION_CODE",
-  //   // yandex: "YOUR_YANDEX_CODE",
-  // },
-
-  // Additional
   category: "technology",
   creator: "Clovo Solutions",
   publisher: "Clovo Solutions",
@@ -122,8 +108,22 @@ export default function RootLayout({
       className="dark overflow-x-hidden"
       style={{ backgroundColor: "#050505" }}
     >
-      <body className="noise-overlay bg-dark-900 text-white antialiased overflow-x-hidden">
+      <head>
+        {/* Preconnect to Google Fonts for faster loading */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        {/* Single combined font request instead of 3 separate @imports */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
         <StructuredData />
+      </head>
+      <body className="noise-overlay bg-dark-900 text-white antialiased overflow-x-hidden">
         <GoogleAnalytics />
         <div className="overflow-hidden w-full">{children}</div>
         <CookieConsent />
