@@ -48,37 +48,25 @@ export default function Footer() {
                 Clovo<span className="text-accent">.</span>
               </span>
             </Link>
-            <p className="text-sm text-white/25 leading-relaxed max-w-xs mb-6">
+            <p className="text-sm text-white/55 leading-relaxed max-w-xs mb-6">
               We build digital systems that help you bring in clients
               consistently. From websites to bookings and automations,
               everything is designed to support your growth.
             </p>
-            <div className="flex items-center gap-3">
-              {/* Social icons placeholder */}
-              {/* {["X", "Li", "Ig"].map((label) => (
-                <a
-                  key={label}
-                  href="#"
-                  className="w-9 h-9 rounded-lg border border-white/[0.06] bg-white/[0.02] flex items-center justify-center text-white/25 hover:text-accent hover:border-accent/20 transition-all duration-300 text-xs font-mono"
-                >
-                  {label}
-                </a>
-              ))} */}
-            </div>
           </div>
 
           {/* Link columns */}
           {footerLinks.map((col) => (
             <div key={col.title}>
-              <h4 className="text-xs font-mono text-white/40 tracking-[0.15em] uppercase mb-4">
+              <h3 className="text-xs font-mono text-white/60 tracking-[0.15em] uppercase mb-4">
                 {col.title}
-              </h4>
+              </h3>
               <ul className="space-y-3">
                 {col.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/25 hover:text-accent transition-colors duration-300"
+                      className="text-sm text-white/55 hover:text-accent transition-colors duration-300"
                     >
                       {link.label}
                     </Link>
@@ -91,20 +79,20 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/15">
+          <p className="text-xs text-white/45">
             &copy; {new Date().getFullYear()} Clovo Solutions. All rights
             reserved.
           </p>
           <div className="flex items-center gap-6">
             <Link
               href="/privacy"
-              className="text-xs text-white/15 hover:text-white/30 transition-colors"
+              className="text-xs text-white/45 hover:text-white/60 transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-xs text-white/15 hover:text-white/30 transition-colors"
+              className="text-xs text-white/45 hover:text-white/60 transition-colors"
             >
               Terms of Service
             </Link>
