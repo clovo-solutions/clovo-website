@@ -209,13 +209,13 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             <h3 className="font-display text-xl font-semibold text-white mb-3">
               Message Sent
             </h3>
-            <p className="text-sm text-white/40 max-w-xs leading-relaxed mb-8">
+            <p className="text-sm text-white/60 max-w-xs leading-relaxed mb-8">
               {t.success}
             </p>
 
             <button
               onClick={() => setStatus("idle")}
-              className="text-sm text-accent/50 hover:text-accent transition-colors underline underline-offset-2"
+              className="text-sm text-accent/70 hover:text-accent transition-colors underline underline-offset-2"
             >
               Send another message
             </button>
@@ -250,7 +250,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                   <p className="text-sm font-medium text-white/70">
                     Get in Touch
                   </p>
-                  <p className="text-xs text-white/25">
+                  <p className="text-xs text-white/55">
                     We respond within 24 hours
                   </p>
                 </div>
@@ -282,7 +282,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                     htmlFor="contact-name"
                     className="block text-xs font-mono text-white/30 tracking-wider uppercase mb-2"
                   >
-                    {t.name} <span className="text-accent/40">*</span>
+                    {t.name} <span className="text-accent/70">*</span>
                   </label>
                   <input
                     id="contact-name"
@@ -311,7 +311,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                     htmlFor="contact-email"
                     className="block text-xs font-mono text-white/30 tracking-wider uppercase mb-2"
                   >
-                    {t.email} <span className="text-accent/40">*</span>
+                    {t.email} <span className="text-accent/70">*</span>
                   </label>
                   <input
                     id="contact-email"
@@ -366,7 +366,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                   htmlFor="contact-message"
                   className="block text-xs font-mono text-white/30 tracking-wider uppercase mb-2"
                 >
-                  {t.message} <span className="text-accent/40">*</span>
+                  {t.message} <span className="text-accent/70">*</span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -391,7 +391,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
 
               {/* GDPR / Consent Section */}
               <div className="space-y-4 pt-2">
-                <p className="text-xs text-white/25 leading-relaxed">
+                <p className="text-xs text-white/55 leading-relaxed">
                   Clovo Solutions is committed to protecting and respecting your
                   privacy, and we&apos;ll only use your personal information to
                   administer your account and to provide the products and
@@ -432,7 +432,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       )}
                     </div>
                   </div>
-                  <span className="text-xs text-white/35 leading-relaxed">
+                  <span className="text-xs text-white/55 leading-relaxed">
                     I agree to receive other communications from Clovo
                     Solutions.
                   </span>
@@ -474,10 +474,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       )}
                     </div>
                   </div>
-                  <span className="text-xs text-white/35 leading-relaxed">
+                  <span className="text-xs text-white/55 leading-relaxed">
                     By clicking submit, I consent to allow Clovo Solutions to
                     store and process my personal information to provide the
-                    content requested. <span className="text-accent/40">*</span>
+                    content requested. <span className="text-accent/70">*</span>
                   </span>
                 </label>
                 {errors.consentProcessing && (
@@ -486,7 +486,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                   </p>
                 )}
 
-                <p className="text-[11px] text-white/15 leading-relaxed">
+                <p className="text-[11px] text-white/25 leading-relaxed">
                   You can unsubscribe from these communications at any time. For
                   more information on our privacy practices, please review our{" "}
                   <a
@@ -553,7 +553,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               </motion.button>
 
               {/* reCAPTCHA notice */}
-              <p className="text-center text-[10px] text-white/10 leading-relaxed">
+              <p className="text-center text-[10px] text-white/45 leading-relaxed">
                 This site is protected by reCAPTCHA and the Google{" "}
                 <a
                   href="https://policies.google.com/privacy"

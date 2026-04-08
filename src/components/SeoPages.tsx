@@ -37,7 +37,7 @@ export default function SeoPages() {
   return (
     <section className="relative pb-28 sm:pb-36 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <p className="text-xs font-mono text-accent/40 tracking-[0.2em] uppercase mb-6 text-center">
+        <p className="text-xs font-mono text-accent/70 tracking-[0.2em] uppercase mb-6 text-center">
           Explore Our Services
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -47,7 +47,7 @@ export default function SeoPages() {
               href={page.href}
               className="group p-5 rounded-2xl border border-white/[0.04] hover:border-accent/10 hover:bg-accent/[0.02] transition-all duration-500"
             >
-              <span className="text-[11px] font-mono text-accent/40 tracking-widest uppercase">
+              <span className="text-[11px] font-mono text-accent/70 tracking-widest uppercase">
                 {page.tag}
               </span>
               <p className="font-display text-sm font-semibold text-white/70 group-hover:text-white mt-2 transition-colors flex items-center gap-2">
@@ -57,6 +57,7 @@ export default function SeoPages() {
                   height="14"
                   viewBox="0 0 14 14"
                   fill="none"
+                  aria-hidden="true"
                   className="text-white/20 group-hover:text-accent group-hover:translate-x-1 transition-all duration-300"
                 >
                   <path
