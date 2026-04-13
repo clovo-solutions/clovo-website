@@ -307,7 +307,7 @@ function TermsContent() {
               <div className="rounded-xl border border-white/[0.04] bg-white/[0.01] p-6 space-y-2">
                 <p className="text-white/50 text-sm">
                   <span className="text-white/60 font-medium">Email:</span>{" "}
-                  legal@clovosolutions.com
+                  clovosolutions@gmail.com
                 </p>
                 <p className="text-white/50 text-sm">
                   <span className="text-white/60 font-medium">Company:</span>{" "}
