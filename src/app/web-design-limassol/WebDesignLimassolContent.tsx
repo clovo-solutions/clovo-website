@@ -256,7 +256,7 @@ export default function WebDesignLimassolContent() {
                 </svg>
               ))}
             </div>
-            <span>4.9 average rating</span>
+            <span>5.0 average rating</span>
           </div>
         </div>
 

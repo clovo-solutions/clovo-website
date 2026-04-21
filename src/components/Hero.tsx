@@ -219,7 +219,7 @@ export default function Hero() {
                 </svg>
               ))}
             </div>
-            <span>4.9 average rating</span>
+            <span>5.0 average rating</span>
           </div>
         </motion.div>
       </div>
