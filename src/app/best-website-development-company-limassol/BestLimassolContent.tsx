@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "How much does a website cost in Limassol?",
-    a: "A properly built business website in Limassol starts around €1,500. That gets you custom design, mobile-first development, SEO foundations, and fast hosting. Sites with booking systems and CRM integration typically run €3,000 to €5,000. Full growth systems with automation and ongoing SEO go beyond that. We have a detailed breakdown on our website cost Cyprus page if you want the full picture.",
+    a: "A properly built business website in Limassol starts around €2,000. That gets you custom design, mobile-first development, SEO foundations, and fast hosting. Sites with booking systems and CRM integration typically run €4,000 to €5,000. Full growth systems with automation and ongoing SEO go beyond that. We have a detailed breakdown on our website cost Cyprus page if you want the full picture.",
   },
   {
     q: "How long does it take to build a website?",
@@ -338,8 +338,8 @@ export default function BestLimassolContent() {
                 >
                   website pricing
                 </Link>{" "}
-                is published openly. Business sites start from €1,500. Sites
-                with booking and CRM start from €3,000. Full growth systems are
+                is published openly. Business sites start from €2,000. Sites
+                with booking and CRM start from €4,000. Full growth systems are
                 custom quoted. Fixed project pricing, 50% deposit, balance on
                 completion, 30 days of post-launch support included. No hourly
                 billing, no surprise invoices, no awkward conversations about
@@ -480,7 +480,7 @@ export default function BestLimassolContent() {
                 </p>
               </div>
               <span className="font-display text-lg font-semibold text-accent whitespace-nowrap">
-                From €1,500
+                From €2,000
               </span>
             </div>
             <div className="p-6 rounded-2xl border border-accent/10 bg-accent/[0.02] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -493,7 +493,7 @@ export default function BestLimassolContent() {
                 </p>
               </div>
               <span className="font-display text-lg font-semibold text-accent whitespace-nowrap">
-                From €3,000
+                From €4,000
               </span>
             </div>
             <div className="p-6 rounded-2xl border border-white/[0.06] bg-white/[0.015] flex flex-col sm:flex-row sm:items-center justify-between gap-4">

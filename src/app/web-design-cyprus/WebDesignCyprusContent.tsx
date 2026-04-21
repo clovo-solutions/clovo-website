@@ -89,7 +89,7 @@ const caseStudies = [
 const pricingTiers = [
   {
     name: "Starter",
-    price: "€1,500",
+    price: "€2,000",
     description:
       "For small businesses and solo operators who need a proper online presence.",
     features: [
@@ -103,7 +103,7 @@ const pricingTiers = [
   },
   {
     name: "Business",
-    price: "€3,000",
+    price: "€4,000",
     description:
       "For businesses that need their website to actively generate leads.",
     features: [
@@ -136,7 +136,7 @@ const pricingTiers = [
 const faqs = [
   {
     q: "How much does web design cost in Cyprus?",
-    a: "It depends on what you need, but we try to keep things transparent. A starter business site begins at €1,500. Most of our clients invest somewhere between €2,000 and €5,000 for a site that genuinely drives results. We always give you a clear quote before any work starts, so there are no surprises.",
+    a: "It depends on what you need, but we try to keep things transparent. A starter business site begins at €2,000. Most of our clients invest somewhere between €2,000 and €5,000 for a site that genuinely drives results. We always give you a clear quote before any work starts, so there are no surprises.",
     link: {
       href: "/website-cost-cyprus",
       text: "See our full breakdown of website costs in Cyprus",
@@ -272,7 +272,7 @@ export default function WebDesignCyprusContent() {
                 </svg>
               ))}
             </div>
-            <span>4.9 average rating</span>
+            <span>5.0 average rating</span>
           </div>
         </div>
 

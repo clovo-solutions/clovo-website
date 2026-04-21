@@ -5,21 +5,21 @@ import AnimatedSection from "./AnimatedSection";
 const testimonials = [
   {
     quote:
-      "I didn't really have a proper system before, just messages and spreadsheets. The new site made things much more professional, and people can actually sign up without me going back and forth with them. It's saved me a lot of time.",
-    name: "Markos Christou",
+      "I needed a website for my small business but honestly had no clue where to begin. Clovo Solutions took care of everything and made the whole process feel really easy. The design turned out clean and modern. Exactly what I had in mind. Really happy with the result!",
+    name: "Markos Christodoulou",
     initials: "MC",
   },
   {
     quote:
-      "We used to rely mostly on word of mouth, and our website wasn't really doing much for us. After working with Clovo, we started getting regular appointment requests through the site. It's been much easier to manage everything without constant phone calls.",
+      "I didn't really have a proper system before, just messages and spreadsheets. The new site made things much more professional, and people can actually sign up without me going back and forth with them. It's saved me a lot of time.",
     name: "Dr. Andreas Petrou",
     initials: "AP",
   },
   {
     quote:
-      "I used to spend hours managing my calendar and chasing leads. Now everything runs automatically. Genuinely life-changing for my practice.",
-    name: "Amira Hassan",
-    initials: "AH",
+      "I used to spend a lot of time going back and forth with clients just to schedule appointments. Now everything is more organized and runs automatically, which has made things much easier to manage.",
+    name: "Анастасия Б",
+    initials: "AБ",
   },
 ];
 

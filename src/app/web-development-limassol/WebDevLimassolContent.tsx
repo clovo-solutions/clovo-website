@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How much does a website cost in Limassol?",
-    a: "Our projects start from €1,500 for a conversion-focused business website. Larger builds with booking systems, CRM integration, and automation workflows typically range from €3,000–€6,000. Every project is scoped individually and we provide a detailed quote after our free discovery call so there are no surprises.",
+    a: "Our projects start from €2,000 for a conversion-focused business website. Larger builds with booking systems, CRM integration, and automation workflows typically range from €4,000–€6,000. Every project is scoped individually and we provide a detailed quote after our free discovery call so there are no surprises.",
   },
   {
     q: "Do you build WordPress websites?",
@@ -377,7 +377,7 @@ export default function WebDevLimassolContent() {
                 </p>
               </div>
               <span className="font-display text-lg font-semibold text-accent whitespace-nowrap">
-                From €1,500
+                From €2,000
               </span>
             </div>
             <div className="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.01] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -390,7 +390,7 @@ export default function WebDevLimassolContent() {
                 </p>
               </div>
               <span className="font-display text-lg font-semibold text-accent whitespace-nowrap">
-                From €3,000
+                From €4,000
               </span>
             </div>
             <div className="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.01] flex flex-col sm:flex-row sm:items-center justify-between gap-4">

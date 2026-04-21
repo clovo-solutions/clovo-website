@@ -10,7 +10,7 @@ const plans = [
     tag: "Essential",
     description:
       "A high-performance website that establishes credibility and turns visitors into inquiries.",
-    price: "Starting from €1,500",
+    price: "Starting from €2,000",
     benefits: [
       "Custom-designed website that reflects your brand and builds trust instantly",
       "Mobile-first, lightning-fast pages that rank higher on Google",
@@ -28,7 +28,7 @@ const plans = [
     tag: "Most Popular",
     description:
       "Everything in Foundation — plus the systems that consistently bring new clients to your door.",
-    price: "Starting from €3,000",
+    price: "Starting from €5,000",
     benefits: [
       "Everything in Foundation, taken further with conversion optimization",
       "Integrated booking system so clients schedule themselves 24/7",

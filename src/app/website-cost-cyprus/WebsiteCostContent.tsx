@@ -7,7 +7,7 @@ import ContactCta from "@/components/ContactCta";
 const faqs = [
   {
     q: "How much does a basic business website cost in Cyprus?",
-    a: "A properly built business website in Cyprus typically starts around €1,500. That gets you a custom design, mobile-first development, SEO foundations, and fast hosting. If you're seeing quotes for €300 or €500, those are almost always template-based sites with minimal customisation and no real SEO work. They might look okay at first glance, but they rarely perform well on Google or convert visitors into actual enquiries.",
+    a: "A properly built business website in Cyprus typically starts around €2,000. That gets you a custom design, mobile-first development, SEO foundations, and fast hosting. If you're seeing quotes for €300 or €500, those are almost always template-based sites with minimal customisation and no real SEO work. They might look okay at first glance, but they rarely perform well on Google or convert visitors into actual enquiries.",
   },
   {
     q: "Why is there such a big price range for websites?",
@@ -135,7 +135,7 @@ export default function WebsiteCostContent() {
                   </p>
                 </div>
                 <span className="font-display text-xl font-bold text-accent whitespace-nowrap">
-                  €1,500 &ndash; €3,000
+                  €2,000 &ndash; €4,000
                 </span>
               </div>
               <p className="text-sm text-white/35 leading-relaxed mb-4">
@@ -165,7 +165,7 @@ export default function WebsiteCostContent() {
                   </p>
                 </div>
                 <span className="font-display text-xl font-bold text-accent whitespace-nowrap">
-                  €3,000 &ndash; €5,000
+                  €4,000 &ndash; €6,000
                 </span>
               </div>
               <p className="text-sm text-white/35 leading-relaxed mb-4">
@@ -228,7 +228,7 @@ export default function WebsiteCostContent() {
                   </p>
                 </div>
                 <span className="font-display text-xl font-bold text-white/60 whitespace-nowrap">
-                  €3,000 &ndash; €8,000+
+                  €4,000 &ndash; €8,000+
                 </span>
               </div>
               <p className="text-sm text-white/35 leading-relaxed mb-4">
@@ -279,7 +279,7 @@ export default function WebsiteCostContent() {
             {[
               {
                 title: "Custom design vs. templates",
-                desc: "A template-based website is faster and cheaper to produce. A custom design takes longer because it's built specifically for your brand, your audience, and your goals. Templates work for some businesses, but if you want to stand out in a competitive market, custom design is worth the investment. The price difference is typically €500 to €1,500.",
+                desc: "A template-based website is faster and cheaper to produce. A custom design takes longer because it's built specifically for your brand, your audience, and your goals. Templates work for some businesses, but if you want to stand out in a competitive market, custom design is worth the investment. The price difference is typically €500 to €2,000.",
               },
               {
                 title: "Number of pages and content",
@@ -380,7 +380,7 @@ export default function WebsiteCostContent() {
           </h2>
           <p className="text-white/40 text-base leading-relaxed mb-6">
             We get it. When you&apos;re starting out or running on a tight
-            budget, a €500 website sounds a lot more appealing than a €3,000
+            budget, a €500 website sounds a lot more appealing than a €4,000
             one. But here&apos;s what we see happen over and over again:
           </p>
           <p className="text-white/40 text-base leading-relaxed mb-6">
@@ -394,8 +394,8 @@ export default function WebsiteCostContent() {
           </p>
           <p className="text-white/40 text-base leading-relaxed mb-6">
             We&apos;re not saying you need to spend €10,000. For most
-            small businesses in Cyprus, a well-built site in the €1,500 to
-            €3,000 range is more than enough to establish credibility, get
+            small businesses in Cyprus, a well-built site in the €2,000 to
+            €4,000 range is more than enough to establish credibility, get
             found on Google, and start generating enquiries. The key is
             spending that money with someone who builds for performance, not
             just appearance.
@@ -548,7 +548,7 @@ export default function WebsiteCostContent() {
             "@type": "ProfessionalService",
             name: "Clovo Solutions",
             description:
-              "Transparent website development pricing for businesses in Cyprus. Custom web design starting from €1,500 with SEO, hosting, and ongoing support included.",
+              "Transparent website development pricing for businesses in Cyprus. Custom web design starting from €2,000 with SEO, hosting, and ongoing support included.",
             url: "https://clovo-solutions.com/website-cost-cyprus",
             areaServed: [
               { "@type": "Country", name: "Cyprus" },

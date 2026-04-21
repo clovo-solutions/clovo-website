@@ -82,7 +82,7 @@ const caseStudies = [
 const pricingTiers = [
   {
     name: "Starter",
-    price: "€1,500",
+    price: "€2,000",
     description:
       "For small businesses and personal brands getting started online.",
     features: [
@@ -96,7 +96,7 @@ const pricingTiers = [
   },
   {
     name: "Business",
-    price: "€3,000",
+    price: "€4,000",
     description:
       "For growing Limassol businesses that need a competitive edge online.",
     features: [
@@ -129,7 +129,7 @@ const pricingTiers = [
 const faqs = [
   {
     q: "How much does web design in Limassol cost?",
-    a: "Our projects start from €1,500 for a starter website and scale based on complexity. Most Limassol businesses invest between €2,000–€5,000 for a professional site that drives real results. We provide detailed quotes after understanding your specific needs.",
+    a: "Our projects start from €2,000 for a starter website and scale based on complexity. Most Limassol businesses invest between €2,000–€5,000 for a professional site that drives real results. We provide detailed quotes after understanding your specific needs.",
     link: {
       href: "/website-cost-cyprus",
       text: "See our full website pricing guide for Cyprus",

@@ -7,7 +7,7 @@ import ContactCta from "@/components/ContactCta";
 const faqs = [
   {
     q: "How much does a clinic website cost in Cyprus?",
-    a: "A professional clinic website typically starts around €1,500 for a clean, SEO-ready site with service pages, a contact form, and Google Maps integration. If you need online booking with calendar sync and automated patient reminders, expect €3,000 to €5,000. Full systems with CRM, multi-practitioner scheduling, and analytics go higher. We give you a clear fixed quote before any work begins. You can see our full pricing breakdown on our website cost Cyprus page.",
+    a: "A professional clinic website typically starts around €2,000 for a clean, SEO-ready site with service pages, a contact form, and Google Maps integration. If you need online booking with calendar sync and automated patient reminders, expect €4,000 to €6,000. Full systems with CRM, multi-practitioner scheduling, and analytics go higher. We give you a clear fixed quote before any work begins. You can see our full pricing breakdown on our website cost Cyprus page.",
   },
   {
     q: "Can patients book appointments directly through the website?",
@@ -390,7 +390,7 @@ export default function ClinicsContent() {
                 </p>
               </div>
               <span className="font-display text-lg font-semibold text-accent whitespace-nowrap">
-                From €1,500
+                From €2,000
               </span>
             </div>
             <div className="p-6 rounded-2xl border border-accent/10 bg-accent/[0.02] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -404,7 +404,7 @@ export default function ClinicsContent() {
                 </p>
               </div>
               <span className="font-display text-lg font-semibold text-accent whitespace-nowrap">
-                From €3,000
+                From €4,000
               </span>
             </div>
             <div className="p-6 rounded-2xl border border-white/[0.06] bg-white/[0.015] flex flex-col sm:flex-row sm:items-center justify-between gap-4">

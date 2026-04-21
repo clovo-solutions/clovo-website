@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "How much does an SEO-optimised website cost?",
-    a: "Our projects start from €1,500 for a business site with full technical SEO foundations. Bigger builds that include ongoing SEO, content strategy, booking systems, and CRM integration typically land between €3,000 and €6,000. Every project is scoped based on your goals and competitive landscape. We give you a clear quote after our free discovery call so there are no surprises.",
+    a: "Our projects start from €2,000 for a business site with full technical SEO foundations. Bigger builds that include ongoing SEO, content strategy, booking systems, and CRM integration typically land between €4,000 and €6,000. Every project is scoped based on your goals and competitive landscape. We give you a clear quote after our free discovery call so there are no surprises.",
   },
   {
     q: "Will you help me rank for specific keywords?",
@@ -339,7 +339,7 @@ export default function SeoWebDevContent() {
                 </p>
               </div>
               <span className="font-display text-lg font-semibold text-accent whitespace-nowrap">
-                From €1,500
+                From €2,000
               </span>
             </div>
             <div className="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.01] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -353,7 +353,7 @@ export default function SeoWebDevContent() {
                 </p>
               </div>
               <span className="font-display text-lg font-semibold text-accent whitespace-nowrap">
-                From €3,000
+                From €4,000
               </span>
             </div>
             <div className="p-6 rounded-2xl border border-white/[0.04] bg-white/[0.01] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
