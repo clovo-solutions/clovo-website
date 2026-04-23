@@ -20,7 +20,7 @@ export default function Contact() {
           {/* Inner glow */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-accent/[0.04] rounded-full blur-[100px] -translate-y-1/2" />
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 p-8 sm:p-12 lg:p-16">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 p-4 sm:p-12 lg:p-16">
             {/* Left: CTA copy */}
             <AnimatedSection direction="left">
               <span className="inline-block text-xs font-mono text-accent/60 tracking-[0.2em] uppercase mb-6">
