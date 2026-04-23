@@ -86,25 +86,29 @@ export default function Navbar() {
     e.preventDefault();
     setMobileOpen(false);
     setHidden(false);
-    if (pathname === "/") {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-        history.replaceState(null, "", `/#${sectionId}`);
-      }
-    } else {
-      router.push("/");
-      const waitAndScroll = () => {
+  
+    // Wait for body scroll lock to release, then scroll
+    setTimeout(() => {
+      if (pathname === "/") {
         const el = document.getElementById(sectionId);
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
           history.replaceState(null, "", `/#${sectionId}`);
-        } else {
-          requestAnimationFrame(waitAndScroll);
         }
-      };
-      setTimeout(waitAndScroll, 100);
-    }
+      } else {
+        router.push("/");
+        const waitAndScroll = () => {
+          const el = document.getElementById(sectionId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+            history.replaceState(null, "", `/#${sectionId}`);
+          } else {
+            requestAnimationFrame(waitAndScroll);
+          }
+        };
+        setTimeout(waitAndScroll, 100);
+      }
+    }, 50);
   };
 
   const handleLogoClick = (e: React.MouseEvent) => {
@@ -122,25 +126,28 @@ export default function Navbar() {
     e.preventDefault();
     setMobileOpen(false);
     setHidden(false);
-    if (pathname === "/") {
-      const el = document.getElementById("contact");
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
-        history.replaceState(null, "", "/#contact");
-      }
-    } else {
-      router.push("/");
-      const waitAndScroll = () => {
+  
+    setTimeout(() => {
+      if (pathname === "/") {
         const el = document.getElementById("contact");
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
           history.replaceState(null, "", "/#contact");
-        } else {
-          requestAnimationFrame(waitAndScroll);
         }
-      };
-      setTimeout(waitAndScroll, 100);
-    }
+      } else {
+        router.push("/");
+        const waitAndScroll = () => {
+          const el = document.getElementById("contact");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+            history.replaceState(null, "", "/#contact");
+          } else {
+            requestAnimationFrame(waitAndScroll);
+          }
+        };
+        setTimeout(waitAndScroll, 100);
+      }
+    }, 50);
   };
 
   return (
