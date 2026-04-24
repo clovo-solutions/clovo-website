@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Pricing from "@/components/Pricing";
 import ClovoCarousel from "@/components/ClovoCarousel";
 import SeoPages from "@/components/SeoPages";
+import Projects from "@/components/Projects";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         <Benefits />
         <Pricing />
         <Testimonials />
+        <Projects />
         {/* <ClovoCarousel /> */}
         <Contact />
         <SeoPages />

@@ -8,9 +8,9 @@ import Image from "next/image";
 const navLinks = [
   { href: "services", label: "Services", num: "01" },
   { href: "how-it-works", label: "How It Works", num: "02" },
-  { href: "benefits", label: "Benefits", num: "03" },
-  { href: "pricing", label: "Pricing", num: "04" },
-  { href: "testimonials", label: "Testimonials", num: "05" },
+  { href: "pricing", label: "Pricing", num: "03" },
+  { href: "testimonials", label: "Testimonials", num: "04" },
+  { href: "projects", label: "Our Work", num: "05" },
 ];
 
 export default function Navbar() {
