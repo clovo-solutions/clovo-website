@@ -6,14 +6,6 @@ import ContactCta from "@/components/ContactCta";
 
 const projects = [
   {
-    title: "Physiotherapy Clinic",
-    image: "/physio.jpg",
-    tags: ["Web Development", "Booking System", "Local SEO"],
-    stats: { label: "", value: "" },
-    location: "Limassol",
-    href: "https://liasides-physio.vercel.app/",
-  },
-  {
     title: "Davtain Dental Clinic.",
     image: "/dental.jpg",
     tags: ["Web Development", "SEO", "Booking System"],
@@ -22,13 +14,21 @@ const projects = [
     href: "https://mariam-davtian-clinic.vercel.app/",
   },
   {
-    title: "Boutique Hotel",
-    image: "/projects/hotel.png",
+    title: "Liva Architectural Studio",
+    image: "/liva-studio.png",
     tags: ["Web Development", "Local SEO"],
-    stats: { label: "", value: "Coming Soon" },
+    stats: { label: "", value: "" },
     // stats: { label: "Direct bookings", value: "+150%" },
-    location: "Paphos",
-    href: "#",
+    location: "Larnaca",
+    href: "https://liva-studio.com/",
+  },
+  {
+    title: "Physiotherapy Clinic",
+    image: "/physio.jpg",
+    tags: ["Web Development", "Booking System", "Local SEO"],
+    stats: { label: "", value: "" },
+    location: "Limassol",
+    href: "https://liasides-physio.vercel.app/",
   },
 //   {
 //     title: "Wellness Centre Growth System",
@@ -196,14 +196,14 @@ export default function Projects() {
                 </div>
 
                 {/* Stat badge (top right of image) */}
-                <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-dark-900/80 backdrop-blur-sm border border-white/[0.06]">
+                {/* <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-dark-900/80 backdrop-blur-sm border border-white/[0.06]">
                   <span className="text-accent font-display font-bold text-xs leading-none">
                     {project.stats.value}
                   </span>
                   <span className="text-white/30 text-[8px] font-mono uppercase tracking-wider">
                     {project.stats.label}
                   </span>
-                </div>
+                </div> */}
               </div>
 
               {/* Card body */}

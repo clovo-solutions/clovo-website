@@ -182,7 +182,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 1 }}
           className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 text-sm text-white/55"
         >
-          {/* <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <div className="flex -space-x-2" aria-hidden="true">
               {[0, 1, 2, 3].map((i) => (
                 <div
@@ -199,7 +199,7 @@ export default function Hero() {
               ))}
             </div>
             <span>15+ businesses launched</span>
-          </div> */}
+          </div>
           <div
             className="hidden sm:block w-px h-4 bg-white/10"
             aria-hidden="true"
@@ -219,7 +219,7 @@ export default function Hero() {
                 </svg>
               ))}
             </div>
-            <span>5.0 average rating</span>
+            <a href="https://share.google/IuXIVnXy9qrd0n1oe" target="_blank" className="text-white/70 hover:text-white">5.0 average rating</a>
           </div>
         </motion.div>
       </div>
