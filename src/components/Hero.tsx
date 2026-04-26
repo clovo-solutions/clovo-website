@@ -219,7 +219,7 @@ export default function Hero() {
                 </svg>
               ))}
             </div>
-            <span>5.0 average rating</span>
+            <a href="https://share.google/IuXIVnXy9qrd0n1oe" target="_blank" className="text-white/70 hover:text-white">5.0 average rating</a>
           </div>
         </motion.div>
       </div>

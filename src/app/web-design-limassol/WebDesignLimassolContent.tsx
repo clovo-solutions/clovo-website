@@ -222,7 +222,7 @@ export default function WebDesignLimassolContent() {
         </AnimatedSection>
 
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/25 mb-16 py-6 border-y border-white/[0.04]">
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             <div className="flex -space-x-2">
               {[0, 1, 2, 3].map((i) => (
                 <div
@@ -239,7 +239,7 @@ export default function WebDesignLimassolContent() {
               ))}
             </div>
             <span>15+ businesses launched</span>
-          </div>
+          </div> */}
           <span className="hidden sm:inline text-white/10">|</span>
           <div className="flex items-center gap-1.5">
             <div className="flex gap-0.5">
