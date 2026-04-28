@@ -92,7 +92,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-28 sm:py-36 overflow-hidden">
+    <section id="services" className="relative py-0 sm:py-0 overflow-hidden">
       {/* Section header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">

@@ -10,6 +10,7 @@ import Pricing from "@/components/Pricing";
 import ClovoCarousel from "@/components/ClovoCarousel";
 import SeoPages from "@/components/SeoPages";
 import Projects from "@/components/Projects";
+import SystemArchitecture from "@/components/SystemArchitecture";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <SystemArchitecture/>
         <Services />
         <HowItWorks />
         <Benefits />
