@@ -229,6 +229,23 @@ export default function Hero() {
         className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-dark-900 to-transparent"
         aria-hidden="true"
       />
+      {/* Scroll indicator */}
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1.5, duration: 0.8 }}
+  className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-0"
+>
+  <motion.div
+    animate={{ y: [0, 6, 0] }}
+    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+    className="flex flex-col items-center"
+  >
+    <div className="w-0.5 h-10 bg-gradient-to-b from-transparent via-accent/30 to-accent/60" />
+    <div className="w-1.5 h-1.5 rounded-full bg-accent/60 shadow-[0_0_8px_rgba(1,217,87,0.4)]" />
+  </motion.div>
+  <div className="w-0.5 h-6 bg-gradient-to-b from-accent/20 to-transparent" />
+</motion.div>
     </section>
   );
 }
