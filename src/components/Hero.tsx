@@ -93,35 +93,35 @@ export default function Hero() {
             className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"
             aria-hidden="true"
           />
-          <span className="text-xs font-mono text-accent tracking-wider uppercase">
-            Automating Business Growth
-          </span>
+<span className="text-xs font-mono text-accent tracking-wider uppercase">
+  Cyprus Web Design Agency
+</span>
         </motion.div>
 
         {/* Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35 }}
-          className="font-display text-5xl sm:text-6xl lg:text-[5.2rem] font-bold leading-[1.05] tracking-tight mb-6"
-        >
-          <span className="text-white">We Build Systems</span>
-          <br />
-          <span className="text-white">That Bring You </span>
-          <span className="gradient-text text-glow">Clients</span>
-        </motion.h1>
+<motion.h1
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.35 }}
+  className="font-display text-5xl sm:text-6xl lg:text-[5.2rem] font-bold leading-[1.05] tracking-tight mb-6"
+>
+  <span className="text-white">Web Design &</span>
+  <br />
+  <span className="text-white">Development in </span>
+  <span className="gradient-text text-glow">Cyprus</span>
+</motion.h1>
 
         {/* Subheadline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
-        >
-          High-converting websites and smart systems that help you bring in
-          clients, so you can focus on your work while everything else runs
-          smoothly.
-        </motion.p>
+<motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.7, delay: 0.5 }}
+  className="text-lg sm:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed font-light"
+>
+  We build websites that rank on Google, load fast, and turn visitors
+  into paying clients. For service businesses, clinics, and SMEs
+  across Cyprus.
+</motion.p>
 
         {/* CTAs */}
         <motion.div

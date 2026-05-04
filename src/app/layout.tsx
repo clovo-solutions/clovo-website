@@ -18,12 +18,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: "Clovo Solutions | Digital Growth for Modern Businesses",
-    template: "%s | Clovo Solutions",
+  default: "Web Design & Development Agency in Cyprus | Clovo Solutions",
+  template: "%s | Clovo Solutions",
   },
-  description:
-    "Clovo Solutions helps small-to-medium businesses build high-converting websites, automate bookings, sync calendars, and streamline client acquisition. Book a free strategy call today.",
-  keywords: [
+  description: "Clovo Solutions is a web design and development agency in Cyprus. We build fast, SEO-optimised websites that generate leads for clinics, service businesses, and SMEs. Book a free strategy call.",
+    keywords: [
     "digital agency",
     "web development",
     "web design",

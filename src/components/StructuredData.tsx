@@ -40,16 +40,18 @@ export default function StructuredData() {
 
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Clovo Solutions",
-    url: "https://clovo-solutions.com",
-    description:
-      "Digital agency specializing in websites, booking system integration, calendar sync, and automated client acquisition for small-to-medium businesses.",
-    priceRange: "$$",
-    areaServed: {
-      "@type": "GeoShape",
-      name: "Worldwide",
-    },
+  "@type": "ProfessionalService",
+  name: "Clovo Solutions",
+  url: "https://clovo-solutions.com",
+  description:
+    "Web design and development agency in Cyprus. Custom websites, SEO, booking systems, and business automation for small and medium businesses across Limassol, Nicosia, and Paphos.",
+  priceRange: "€€",  areaServed: [
+    { "@type": "Country", name: "Cyprus" },
+    { "@type": "City", name: "Limassol" },
+    { "@type": "City", name: "Nicosia" },
+    { "@type": "City", name: "Paphos" },
+    { "@type": "City", name: "Larnaca" },
+  ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Digital Services",
@@ -95,7 +97,7 @@ export default function StructuredData() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "50",
+      reviewCount: "13",
       bestRating: "5",
       worstRating: "1",
     },
