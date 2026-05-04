@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { trackCTA } from "./GoogleAnalytics";
 
 export default function Hero() {
   return (
@@ -132,6 +133,7 @@ export default function Hero() {
         >
           <Link
             href="#contact"
+              onClick={() => trackCTA("Hero CTA")}
             className="group relative inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02] active:scale-[0.98]"
           >
             Book a Free Strategy Call

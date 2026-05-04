@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import locale from "@/locales/en.json";
+import { trackLead } from "@/components/GoogleAnalytics";
+
 
 interface FormData {
   name: string;
@@ -155,6 +157,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
       }
 
       setStatus("success");
+      trackLead("Strategy Call Form"); 
       setFormData({
         name: "",
         email: "",

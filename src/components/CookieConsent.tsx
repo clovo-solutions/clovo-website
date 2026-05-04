@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 const COOKIE_CONSENT_KEY = "clovo_cookie_consent";
+export const CONSENT_EVENT = "clovo_consent_updated";
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
@@ -21,9 +22,9 @@ export default function CookieConsent() {
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
-    setVisible(false);
-    window.dispatchEvent(new Event("storage"));
+  localStorage.setItem(COOKIE_CONSENT_KEY, "accepted");
+  window.dispatchEvent(new Event(CONSENT_EVENT)); 
+  setVisible(false);
   };
 
   const handleDecline = () => {
