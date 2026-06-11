@@ -1,5 +1,6 @@
 "use client";
 
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import ContactCta from "@/components/ContactCta";
@@ -18,47 +19,92 @@ const projects = [
     image: "/liva-studio.png",
     tags: ["Web Development", "Local SEO"],
     stats: { label: "", value: "" },
-    // stats: { label: "Direct bookings", value: "+150%" },
     location: "Larnaca",
     href: "https://liva-studio.com/",
   },
   {
-    title: "Physiotherapy Clinic",
-    image: "/physio.jpg",
-    tags: ["Web Development", "Booking System", "Local SEO"],
+    title: "Milkbar Café · Kitchen · Bar",
+    image: "/milkbar.png",
+    tags: ["Web Development", "Local SEO"],
     stats: { label: "", value: "" },
     location: "Limassol",
-    href: "https://liasides-physio.vercel.app/",
+    href: "https://milkbar-lilac.vercel.app/",
   },
-//   {
-//     title: "Wellness Centre Growth System",
-//     image: "/projects/wellness.png",
-//     tags: ["Web Design", "CRM", "Booking System"],
-//     stats: { label: "Patient enquiries", value: "3x" },
-//     location: "Nicosia",
-//     href: "#",
-//   },
-//   {
-//     title: "Consulting Firm Lead Engine",
-//     image: "/projects/consulting.png",
-//     tags: ["Automation", "Lead Generation", "Analytics"],
-//     stats: { label: "Less ad spend", value: "40%" },
-//     location: "Limassol",
-//     href: "#",
-//   },
-//   {
-//     title: "Dental Practice Online System",
-//     image: "/projects/dental.png",
-//     tags: ["Web Development", "Booking System", "Local SEO"],
-//     stats: { label: "Online bookings/wk", value: "30+" },
-//     location: "Larnaca",
-//     href: "#",
-//   },
+  {
+    title: "La Veranda Restaurant",
+    image: "/la-veranda.png",
+    tags: ["Web Development", "Local SEO"],
+    stats: { label: "", value: "" },
+    location: "Limassol",
+    href: "https://la-veranda.vercel.app",
+  },
+  {
+    title: "Auto Cyprus Car Dealership",
+    image: "/auto-cyprus.png",
+    tags: ["Web Development", "Local SEO"],
+    stats: { label: "", value: "" },
+    location: "Limassol",
+    href: "https://auto-cyprus.vercel.app",
+  },
 ];
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+/* Aligns the carousel's left edge with the max-w-7xl (80rem) content column,
+   while letting cards bleed to the viewport's right edge. */
+const trackPadding =
+  "pl-6 pr-6 lg:pl-[max(2rem,calc((100vw-80rem)/2+2rem))] lg:pr-[max(2rem,calc((100vw-80rem)/2+2rem))]";
+const trackSnapPadding =
+  "scroll-pl-6 lg:scroll-pl-[max(2rem,calc((100vw-80rem)/2+2rem))]";
+
 export default function Projects() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+  const [progress, setProgress] = useState(0);
+
+  const handleScroll = useCallback(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    setProgress(maxScroll > 0 ? track.scrollLeft / maxScroll : 0);
+
+    const cards = Array.from(track.children) as HTMLElement[];
+    if (cards.length === 0) return;
+    const first = cards[0].offsetLeft;
+    let closest = 0;
+    let minDist = Infinity;
+    cards.forEach((card, i) => {
+      const dist = Math.abs(card.offsetLeft - first - track.scrollLeft);
+      if (dist < minDist) {
+        minDist = dist;
+        closest = i;
+      }
+    });
+    setActive(closest);
+  }, []);
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("resize", handleScroll);
+    return () => window.removeEventListener("resize", handleScroll);
+  }, [handleScroll]);
+
+  const scrollToIndex = (index: number) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const cards = Array.from(track.children) as HTMLElement[];
+    const target = cards[Math.max(0, Math.min(index, cards.length - 1))];
+    if (!target) return;
+    track.scrollTo({
+      left: target.offsetLeft - cards[0].offsetLeft,
+      behavior: "smooth",
+    });
+  };
+
+  const atStart = active === 0;
+  const atEnd = active === projects.length - 1;
+
   return (
     <section id="projects" className="relative py-28 sm:py-36 overflow-hidden">
       {/* Background */}
@@ -87,7 +133,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7, ease }}
-          className="text-center mb-16 sm:mb-20"
+          className="text-center mb-12 sm:mb-16"
         >
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-accent/15 bg-accent/[0.04] mb-6">
             <span
@@ -109,27 +155,42 @@ export default function Projects() {
             by one thing: did it bring in more clients.
           </p>
         </motion.div>
+      </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {/* Carousel */}
+      <div
+        className="relative"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Our work"
+      >
+        {/* Edge fades */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden md:block w-16 lg:w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden md:block w-16 lg:w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
+
+        <div
+          ref={trackRef}
+          onScroll={handleScroll}
+          className={`flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory pb-2 ${trackPadding} ${trackSnapPadding} [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden`}
+        >
           {projects.map((project, i) => (
             <motion.a
               key={project.title}
               href={project.href}
               target="_blank"
+              aria-label={`${project.title} — view project (${i + 1} of ${projects.length})`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{
                 duration: 0.6,
-                delay: i * 0.08,
+                delay: Math.min(i, 3) * 0.08,
                 ease,
               }}
-              className="group relative rounded-2xl border border-white/[0.04] bg-white/[0.01] overflow-hidden transition-all duration-500 hover:border-accent/20 cursor-pointer block"
+              className="group relative flex-none snap-start w-[min(84vw,340px)] sm:w-[400px] lg:w-[420px] rounded-2xl border border-white/[0.04] bg-white/[0.01] overflow-hidden transition-all duration-500 hover:border-accent/20 cursor-pointer block"
             >
               {/* Screenshot area */}
               <div className="relative aspect-[16/10] overflow-hidden bg-dark-800">
-                {/* Placeholder gradient (replace with real images) */}
                 <div
                   className="absolute inset-0"
                   style={{
@@ -139,23 +200,13 @@ export default function Projects() {
                   }}
                 />
 
-{project.image.startsWith("/projects/") ? (
-  <div
-    className="absolute inset-0"
-    style={{
-      background: "linear-gradient(135deg, rgba(1,217,87,0.03) 0%, rgba(5,5,5,0.95) 60%, rgba(10,10,10,1) 100%)",
-    }}
-  />
-) : (
-  <Image
-    src={project.image}
-    alt={project.title}
-    fill
-    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-  />
-)}
-
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                  sizes="(max-width: 640px) 84vw, 420px"
+                />
 
                 {/* Faint grid inside screenshot area */}
                 <div
@@ -194,21 +245,10 @@ export default function Projects() {
                     </svg>
                   </div>
                 </div>
-
-                {/* Stat badge (top right of image) */}
-                {/* <div className="absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-dark-900/80 backdrop-blur-sm border border-white/[0.06]">
-                  <span className="text-accent font-display font-bold text-xs leading-none">
-                    {project.stats.value}
-                  </span>
-                  <span className="text-white/30 text-[8px] font-mono uppercase tracking-wider">
-                    {project.stats.label}
-                  </span>
-                </div> */}
               </div>
 
               {/* Card body */}
               <div className="p-5">
-                {/* Location + title */}
                 <span className="text-[10px] font-mono text-white/20 tracking-[0.15em] uppercase">
                   {project.location}
                 </span>
@@ -216,7 +256,6 @@ export default function Projects() {
                   {project.title}
                 </h3>
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-1.5">
                   {project.tags.map((tag) => (
                     <span
@@ -234,8 +273,70 @@ export default function Projects() {
             </motion.a>
           ))}
         </div>
+      </div>
 
-        {/* CTA */}
+      {/* Controls: counter / progress / arrows */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6, delay: 0.15, ease }}
+        className="relative max-w-7xl mx-auto px-6 lg:px-8 mt-8 sm:mt-10 flex items-center gap-5 sm:gap-8"
+      >
+        <span className="font-mono text-[11px] text-white/30 tracking-[0.18em] tabular-nums whitespace-nowrap">
+          {String(active + 1).padStart(2, "0")}
+          <span className="text-white/15"> / {String(projects.length).padStart(2, "0")}</span>
+        </span>
+
+        {/* Progress line */}
+        <div className="relative flex-1 h-px bg-white/[0.06] overflow-hidden rounded-full">
+          <div
+            className="absolute inset-y-0 left-0 bg-gradient-to-r from-accent/40 to-accent transition-[width] duration-300 ease-out"
+            style={{ width: `${Math.max(progress * 100, 4)}%` }}
+          />
+        </div>
+
+        {/* Arrows */}
+        <div className="flex items-center gap-2.5">
+          <button
+            type="button"
+            onClick={() => scrollToIndex(active - 1)}
+            disabled={atStart}
+            aria-label="Previous project"
+            className="flex items-center justify-center w-11 h-11 sm:w-10 sm:h-10 rounded-full border border-white/[0.08] text-white/50 transition-all duration-300 hover:border-accent/40 hover:text-accent hover:shadow-[0_0_20px_rgba(1,217,87,0.12)] active:scale-95 disabled:opacity-25 disabled:pointer-events-none"
+          >
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <path
+                d="M13 8H3m0 0l4-4M3 8l4 4"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={() => scrollToIndex(active + 1)}
+            disabled={atEnd}
+            aria-label="Next project"
+            className="flex items-center justify-center w-11 h-11 sm:w-10 sm:h-10 rounded-full border border-white/[0.08] text-white/50 transition-all duration-300 hover:border-accent/40 hover:text-accent hover:shadow-[0_0_20px_rgba(1,217,87,0.12)] active:scale-95 disabled:opacity-25 disabled:pointer-events-none"
+          >
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <path
+                d="M3 8h10m0 0L9 4m4 4L9 12"
+                stroke="currentColor"
+                strokeWidth="1.75"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </motion.div>
+
+      {/* CTA */}
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
