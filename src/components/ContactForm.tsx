@@ -32,8 +32,7 @@ const t = locale.contact.form;
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
 
-// TODO: add Clovo's WhatsApp number in international format, e.g. "https://wa.me/35799123456"
-const WHATSAPP_URL = "https://wa.me/";
+const WHATSAPP_URL = "https://wa.me/35797457001";
 
 export default function ContactForm({ className = "" }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
@@ -229,7 +228,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="rounded-2xl border border-white/[0.06] bg-dark-800/60 backdrop-blur-sm overflow-hidden"
+            className="h-full flex flex-col rounded-2xl border border-white/[0.06] bg-dark-800/60 backdrop-blur-sm overflow-hidden"
           >
             {/* Form header */}
             <div className="p-6 border-b border-white/[0.04]">
@@ -260,7 +259,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             </div>
 
             {/* Form body */}
-            <div className="p-6 space-y-5">
+            <div className="p-6 flex-1 flex flex-col gap-5">
               {/* Error banner */}
               <AnimatePresence>
                 {status === "error" && (
@@ -576,7 +575,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               </p>
 
               {/* Alternative contact channels */}
-              <div className="text-center pt-5 border-t border-white/[0.04] text-sm text-white/40">
+              <div className="mt-auto text-center pt-5 border-t border-white/[0.04] text-sm text-white/40">
                 Prefer to talk?{" "}
                 <a
                   href={WHATSAPP_URL}
@@ -586,12 +585,19 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                 >
                   WhatsApp us →
                 </a>{" "}
+                · call{" "}
+                <a
+                  href="tel:+35797457001"
+                  className="underline underline-offset-2 hover:text-white/70 transition-colors whitespace-nowrap"
+                >
+                  +357 97 457 001
+                </a>{" "}
                 · or email{" "}
                 <a
-                  href="mailto:hello@clovo-solutions.com"
+                  href="mailto:clovosolutions@gmail.com"
                   className="underline underline-offset-2 hover:text-white/70 transition-colors"
                 >
-                  hello@clovo-solutions.com
+                  clovosolutions@gmail.com
                 </a>
               </div>
             </div>

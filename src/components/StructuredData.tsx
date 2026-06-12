@@ -10,7 +10,8 @@ export default function StructuredData() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "sales",
-      email: "hello@clovosolutions.com",
+      email: "clovosolutions@gmail.com",
+      telephone: "+357 97457001",
       availableLanguage: ["English"],
     },
     sameAs: [

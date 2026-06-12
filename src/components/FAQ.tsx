@@ -5,8 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import ContactCta from "./ContactCta";
 
-// TODO: add Clovo's WhatsApp number in international format, e.g. "https://wa.me/35799123456"
-const WHATSAPP_URL = "https://wa.me/";
+const WHATSAPP_URL = "https://wa.me/35797457001";
 
 const faqs = [
   {

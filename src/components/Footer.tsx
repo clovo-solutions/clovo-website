@@ -4,8 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const GOOGLE_REVIEWS_URL = "https://share.google/IuXIVnXy9qrd0n1oe";
-// TODO: add Clovo's WhatsApp number in international format, e.g. "https://wa.me/35799123456"
-const WHATSAPP_URL = "https://wa.me/";
+const WHATSAPP_URL = "https://wa.me/35797457001";
 
 const footerLinks = [
   {
@@ -88,10 +87,18 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-white/55">
               <li>
                 <a
-                  href="mailto:hello@clovo-solutions.com"
+                  href="mailto:clovosolutions@gmail.com"
                   className="hover:text-accent transition-colors duration-300"
                 >
-                  hello@clovo-solutions.com
+                  clovosolutions@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+35797457001"
+                  className="hover:text-accent transition-colors duration-300"
+                >
+                  +357 97 457 001
                 </a>
               </li>
               <li>
