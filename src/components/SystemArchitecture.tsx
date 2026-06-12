@@ -384,58 +384,7 @@ export default function SystemArchitecture() {
             filter: "blur(20px)", transform: "rotateX(55deg)", transformOrigin: "top center",
           }} />
         </div>
-        {/* SEO content - server rendered, indexable */}
-{/* SEO content - server rendered, indexable */}
-<div className="mt-24 relative">
-  {/* Top separator */}
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40%] h-px bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
-
-  <div className="pt-20 max-w-4xl mx-auto text-center">
-    {/* Eyebrow label — matches the badge pattern from Hero/SystemArchitecture */}
-    <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-accent/15 bg-accent/[0.04] mb-8">
-      <span className="w-1.5 h-1.5 rounded-full bg-accent opacity-60" aria-hidden />
-      <span className="text-[11px] font-mono text-accent/60 tracking-[0.18em] uppercase">Our Reach</span>
-    </div>
-
-    {/* Title */}
-    <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-[-0.03em] text-white mb-6">
-      Built for{" "}
-      <span className="gradient-text">Businesses in Cyprus</span>
-    </h3>
-
-    {/* Main text */}
-    <p className="text-lg sm:text-xl text-white/50 leading-relaxed font-light max-w-2xl mx-auto mb-12">
-      Clovo Solutions is a web design and development agency helping businesses in{" "}
-      <span className="text-white/80 font-medium">Limassol</span>,{" "}
-      <span className="text-white/80 font-medium">Nicosia</span>,{" "}
-      <span className="text-white/80 font-medium">Paphos</span>, and across the island
-      build websites that actually generate clients.
-    </p>
-
-    {/* Stats row — pulls from the same design language as the social proof in Hero */}
-    <div className="flex flex-col sm:flex-row items-center justify-center gap-px sm:gap-0 rounded-2xl border border-white/[0.06] bg-white/[0.02] overflow-hidden max-w-2xl mx-auto mb-12">
-      {[
-        { value: "SEO", label: "Google-first development" },
-        { value: "Speed", label: "Core Web Vitals optimised" },
-        { value: "CY", label: "Cyprus-based & trusted" },
-      ].map((stat, i) => (
-        <div
-          key={i}
-          className="flex-1 w-full sm:w-auto flex flex-col items-center gap-1.5 px-6 py-5 border-b sm:border-b-0 sm:border-r border-white/[0.06] last:border-0"
-        >
-          <span className="font-mono text-accent/80 text-lg font-semibold tracking-tight">{stat.value}</span>
-          <span className="text-[11px] font-mono text-white/25 tracking-[0.12em] uppercase">{stat.label}</span>
-        </div>
-      ))}
-    </div>
-
-    {/* Supporting line */}
-    <p className="text-sm sm:text-base text-white/30 leading-relaxed max-w-xl mx-auto">
-      We combine modern development, SEO, booking systems, and automation
-      into one streamlined system designed for consistent growth.
-    </p>
-  </div>
-</div>
+        {/* "Our Reach" content extracted to components/LocalTrust.tsx (rendered on the homepage) */}
       </div>
 
       <style jsx>{`

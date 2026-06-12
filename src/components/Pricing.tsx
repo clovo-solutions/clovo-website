@@ -8,6 +8,8 @@ const plans = [
   {
     name: "Foundation",
     tag: "Essential",
+    bestFor:
+      "New businesses, or anyone whose current website looks dated and brings in nothing.",
     description:
       "A high-performance website that establishes credibility and turns visitors into inquiries.",
     price: "Starting from €2,000",
@@ -26,6 +28,7 @@ const plans = [
   {
     name: "Growth",
     tag: "Most Popular",
+    bestFor: "Clinics, salons, and any business that books appointments.",
     description:
       "Everything in Foundation — plus the systems that consistently bring new clients to your door.",
     price: "Starting from €5,000",
@@ -38,7 +41,7 @@ const plans = [
       "Calendar sync across Google, Outlook, and your existing tools",
     ],
     outcome:
-      "Stop chasing clients. Let your website bring them to you on autopilot.",
+      "Stop chasing clients — your website books them for you, even after hours.",
     cta: "Book a Call",
     featured: true,
     premium: false,
@@ -46,8 +49,9 @@ const plans = [
   {
     name: "Scale",
     tag: "Full Suite",
+    bestFor: "Established businesses ready to grow across Cyprus.",
     description:
-      "A complete digital growth engine — for businesses ready to systemize and multiply.",
+      "A complete package for businesses ready to systemize and multiply.",
     price: "Custom",
     benefits: [
       "Full Growth package plus advanced automation workflows",
@@ -58,7 +62,7 @@ const plans = [
       "Monthly reporting with actionable insights to scale faster",
     ],
     outcome:
-      "Turn your website into a self-running growth machine that compounds over time.",
+      "Your website becomes your best salesperson, working around the clock.",
     cta: "Book a Call",
     featured: false,
     premium: true,
@@ -131,6 +135,12 @@ function PricingCard({
         <h3 className="font-display text-2xl font-bold text-white mb-2">
           {plan.name}
         </h3>
+
+        {/* Best for */}
+        <p className="text-xs text-white/45 leading-relaxed mb-3">
+          <span className="font-semibold text-white/60">Best for:</span>{" "}
+          {plan.bestFor}
+        </p>
 
         {/* Description */}
         <p className="text-sm text-white/30 leading-relaxed mb-6">
@@ -302,18 +312,40 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Bottom note */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        {/* Closing CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="text-center text-xs text-white/20 mt-12 max-w-lg mx-auto"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-center mt-16 p-8 sm:p-10 rounded-3xl border border-white/[0.06] bg-white/[0.02] max-w-2xl mx-auto"
         >
-          All packages include a free 30-minute discovery call. Pricing is
-          project-based with no hidden fees and no recurring charges unless you
-          choose ongoing support.
-        </motion.p>
+          <p className="font-display text-lg font-semibold text-white mb-2">
+            Not sure which package fits?
+          </p>
+          <p className="text-sm text-white/40 leading-relaxed mb-6 max-w-md mx-auto">
+            That&apos;s exactly what the free call is for — we&apos;ll tell you
+            honestly, even if the answer is &quot;the cheapest one.&quot;
+          </p>
+          <Link
+            href="#contact"
+            className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Book a Free 30-Minute Call
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path
+                d="M3 8h10m0 0L9 4m4 4L9 12"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Link>
+          <p className="text-xs text-white/25 mt-4">
+            No contract. No pressure. No hidden fees.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

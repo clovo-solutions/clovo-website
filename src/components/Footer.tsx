@@ -3,29 +3,33 @@
 import Link from "next/link";
 import Image from "next/image";
 
+const GOOGLE_REVIEWS_URL = "https://share.google/IuXIVnXy9qrd0n1oe";
+// TODO: add Clovo's WhatsApp number in international format, e.g. "https://wa.me/35799123456"
+const WHATSAPP_URL = "https://wa.me/";
+
 const footerLinks = [
   {
     title: "Company",
     links: [
-      { label: "About", href: "#" },
-      { label: "Services", href: "#services" },
-      { label: "Contact", href: "#contact" },
+      { label: "About", href: "/#about" },
+      { label: "Services", href: "/#services" },
+      { label: "Contact", href: "/#contact" },
     ],
   },
   {
     title: "Services",
     links: [
-      { label: "Web Development", href: "#services" },
-      { label: "Booking Systems", href: "#services" },
-      { label: "Automations", href: "#services" },
+      { label: "Web Development", href: "/#services" },
+      { label: "Booking Systems", href: "/#services" },
+      { label: "Automations", href: "/#services" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "How It Works", href: "#how-it-works" },
-      { label: "Testimonials", href: "#testimonials" },
-      { label: "Book a Call", href: "#contact" },
+      { label: "How It Works", href: "/#how-it-works" },
+      { label: "Testimonials", href: "/#testimonials" },
+      { label: "Book a Call", href: "/#contact" },
     ],
   },
 ];
@@ -34,7 +38,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/[0.04]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-5">
@@ -75,6 +79,34 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+
+          {/* Contact column */}
+          <div>
+            <h3 className="text-xs font-mono text-white/60 tracking-[0.15em] uppercase mb-4">
+              Contact
+            </h3>
+            <ul className="space-y-3 text-sm text-white/55">
+              <li>
+                <a
+                  href="mailto:hello@clovo-solutions.com"
+                  className="hover:text-accent transition-colors duration-300"
+                >
+                  hello@clovo-solutions.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors duration-300"
+                >
+                  WhatsApp →
+                </a>
+              </li>
+              <li>Limassol, Cyprus</li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom bar */}
@@ -84,6 +116,14 @@ export default function Footer() {
             reserved.
           </p>
           <div className="flex items-center gap-6">
+            <a
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-white/45 hover:text-white/60 transition-colors"
+            >
+              <span className="text-accent">★</span> 5.0 on Google
+            </a>
             <Link
               href="/privacy"
               className="text-xs text-white/45 hover:text-white/60 transition-colors"

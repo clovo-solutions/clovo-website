@@ -2,24 +2,29 @@
 
 import AnimatedSection from "./AnimatedSection";
 
+const GOOGLE_REVIEWS_URL = "https://share.google/IuXIVnXy9qrd0n1oe";
+
 const testimonials = [
   {
     quote:
       "I needed a website for my small business but honestly had no clue where to begin. Clovo Solutions took care of everything and made the whole process feel really easy. The design turned out clean and modern. Exactly what I had in mind. Really happy with the result!",
     name: "Markos Christodoulou",
+    role: "Small business owner",
     initials: "MC",
   },
   {
     quote:
       "I didn't really have a proper system before, just messages and spreadsheets. The new site made things much more professional, and people can actually sign up without me going back and forth with them. It's saved me a lot of time.",
     name: "Dr. Andreas Petrou",
+    role: "Clinic — Cyprus",
     initials: "AP",
   },
   {
     quote:
       "I used to spend a lot of time going back and forth with clients just to schedule appointments. Now everything is more organized and runs automatically, which has made things much easier to manage.",
-    name: "Анастасия Б",
-    initials: "AБ",
+    name: "Anastasia B.",
+    role: "Service business — Cyprus",
+    initials: "AB",
   },
 ];
 
@@ -75,13 +80,26 @@ export default function Testimonials() {
                     <p className="text-sm font-medium text-white/70">
                       {testimonial.name}
                     </p>
-                    {/* <p className="text-xs text-white/25">{testimonial.role}</p> */}
+                    <p className="text-xs text-white/25">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Google reviews link */}
+        <AnimatedSection className="text-center mt-10">
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white/40 hover:text-white/70 transition-colors"
+          >
+            <span className="text-accent">★</span> 5.0 on Google — read all our
+            reviews →
+          </a>
+        </AnimatedSection>
       </div>
     </section>
   );

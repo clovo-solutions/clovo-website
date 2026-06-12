@@ -32,6 +32,9 @@ const t = locale.contact.form;
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
 
+// TODO: add Clovo's WhatsApp number in international format, e.g. "https://wa.me/35799123456"
+const WHATSAPP_URL = "https://wa.me/";
+
 export default function ContactForm({ className = "" }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -96,10 +99,6 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
       newErrors.email = t.validation.emailRequired;
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = t.validation.emailInvalid;
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = t.validation.messageRequired;
     }
 
     if (!formData.consentProcessing) {
@@ -251,7 +250,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-white/70">
-                    Get in Touch
+                    Book Your Free Call
                   </p>
                   <p className="text-xs text-white/55">
                     We respond within 24 hours
@@ -369,7 +368,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                   htmlFor="contact-message"
                   className="block text-xs font-mono text-white/30 tracking-wider uppercase mb-2"
                 >
-                  {t.message} <span className="text-accent/70">*</span>
+                  {t.message}{" "}
+                  <span className="text-white/15 normal-case tracking-normal">
+                    ({t.messageHint})
+                  </span>
                 </label>
                 <textarea
                   id="contact-message"
@@ -395,14 +397,15 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               {/* GDPR / Consent Section */}
               <div className="space-y-4 pt-2">
                 <p className="text-xs text-white/55 leading-relaxed">
-                  Clovo Solutions is committed to protecting and respecting your
-                  privacy, and we&apos;ll only use your personal information to
-                  administer your account and to provide the products and
-                  services you requested from us. From time to time, we would
-                  like to contact you about our products and services, as well
-                  as other content that may be of interest to you. If you
-                  consent to us contacting you for this purpose, please tick
-                  below:
+                  We&apos;ll only use your details to reply to you. Full details
+                  in our{" "}
+                  <a
+                    href="/privacy"
+                    className="underline underline-offset-2 hover:text-white/80 transition-colors"
+                  >
+                    Privacy Policy
+                  </a>
+                  .
                 </p>
 
                 {/* Opt-in: marketing communications */}
@@ -489,17 +492,6 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                   </p>
                 )}
 
-                <p className="text-[11px] text-white/25 leading-relaxed">
-                  You can unsubscribe from these communications at any time. For
-                  more information on our privacy practices, please review our{" "}
-                  <a
-                    href="/privacy"
-                    className="text-white/25 hover:text-white/40 underline underline-offset-2 transition-colors"
-                  >
-                    Privacy Policy
-                  </a>
-                  .
-                </p>
               </div>
 
               {/* Submit */}
@@ -555,6 +547,11 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                 )}
               </motion.button>
 
+              <p className="text-xs text-white/40 text-center">
+                No contract. No pressure. If we&apos;re not the right fit,
+                we&apos;ll say so.
+              </p>
+
               {/* reCAPTCHA notice */}
               <p className="text-center text-[10px] text-white/45 leading-relaxed">
                 This site is protected by reCAPTCHA and the Google{" "}
@@ -577,6 +574,26 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                 </a>{" "}
                 apply.
               </p>
+
+              {/* Alternative contact channels */}
+              <div className="text-center pt-5 border-t border-white/[0.04] text-sm text-white/40">
+                Prefer to talk?{" "}
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-2 hover:text-white/70 transition-colors"
+                >
+                  WhatsApp us →
+                </a>{" "}
+                · or email{" "}
+                <a
+                  href="mailto:hello@clovo-solutions.com"
+                  className="underline underline-offset-2 hover:text-white/70 transition-colors"
+                >
+                  hello@clovo-solutions.com
+                </a>
+              </div>
             </div>
           </motion.div>
         )}

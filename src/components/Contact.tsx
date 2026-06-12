@@ -68,6 +68,44 @@ export default function Contact() {
                   </motion.div>
                 ))}
               </div>
+
+              {/* What happens after you book */}
+              <div className="mt-10">
+                <p className="text-xs font-mono text-white/30 tracking-[0.15em] uppercase mb-4">
+                  What happens after you book
+                </p>
+                <ol className="space-y-3">
+                  {[
+                    {
+                      step: "1",
+                      title: "We talk for 30 minutes",
+                      desc: "You tell us about your business. We ask questions. No tech talk.",
+                    },
+                    {
+                      step: "2",
+                      title: "You get a plan within 48 hours",
+                      desc: "What we'd build, what it costs, and what it gets you — in writing.",
+                    },
+                    {
+                      step: "3",
+                      title: "You decide. No pressure.",
+                      desc: "Take it, shop it around, or do nothing. The plan is yours either way.",
+                    },
+                  ].map((item) => (
+                    <li key={item.step} className="flex gap-3 text-sm">
+                      <span className="flex-shrink-0 w-6 h-6 rounded-full bg-accent/10 text-accent text-xs flex items-center justify-center font-medium">
+                        {item.step}
+                      </span>
+                      <p className="leading-relaxed">
+                        <span className="font-medium text-white/70">
+                          {item.title}
+                        </span>
+                        <span className="text-white/40"> — {item.desc}</span>
+                      </p>
+                    </li>
+                  ))}
+                </ol>
+              </div>
             </AnimatedSection>
 
             {/* Right: Contact form */}

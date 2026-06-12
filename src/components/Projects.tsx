@@ -7,10 +7,10 @@ import ContactCta from "@/components/ContactCta";
 
 const projects = [
   {
-    title: "Davtain Dental Clinic.",
+    title: "Davtian Dental Clinic",
     image: "/dental.jpg",
     tags: ["Web Development", "SEO", "Booking System"],
-    stats: { label: "", value: "" },
+    fact: "Booking system included",
     location: "Limassol",
     href: "https://mariam-davtian-clinic.vercel.app/",
   },
@@ -18,7 +18,7 @@ const projects = [
     title: "Liva Architectural Studio",
     image: "/liva-studio.png",
     tags: ["Web Development", "Local SEO"],
-    stats: { label: "", value: "" },
+    fact: "Live at liva-studio.com",
     location: "Larnaca",
     href: "https://liva-studio.com/",
   },
@@ -26,7 +26,7 @@ const projects = [
     title: "Milkbar Café · Kitchen · Bar",
     image: "/milkbar.png",
     tags: ["Web Development", "Local SEO"],
-    stats: { label: "", value: "" },
+    fact: "Local SEO optimised",
     location: "Limassol",
     href: "https://milkbar-lilac.vercel.app/",
   },
@@ -34,7 +34,7 @@ const projects = [
     title: "La Veranda Restaurant",
     image: "/la-veranda.png",
     tags: ["Web Development", "Local SEO"],
-    stats: { label: "", value: "" },
+    fact: "Local SEO optimised",
     location: "Limassol",
     href: "https://la-veranda.vercel.app",
   },
@@ -42,7 +42,7 @@ const projects = [
     title: "Auto Cyprus Car Dealership",
     image: "/auto-cyprus.png",
     tags: ["Web Development", "Local SEO"],
-    stats: { label: "", value: "" },
+    fact: "Local SEO optimised",
     location: "Limassol",
     href: "https://auto-cyprus.vercel.app",
   },
@@ -173,105 +173,154 @@ export default function Projects() {
           onScroll={handleScroll}
           className={`flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory pb-2 ${trackPadding} ${trackSnapPadding} [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden`}
         >
-          {projects.map((project, i) => (
-            <motion.a
-              key={project.title}
-              href={project.href}
-              target="_blank"
-              aria-label={`${project.title} — view project (${i + 1} of ${projects.length})`}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{
+          {projects.map((project, i) => {
+            // Only link out to real production domains — vercel.app previews
+            // read as demos and leak visitors mid-funnel.
+            const isLive = !project.href.includes("vercel.app");
+            const motionProps = {
+              initial: { opacity: 0, y: 24 },
+              whileInView: { opacity: 1, y: 0 },
+              viewport: { once: true, amount: 0.15 },
+              transition: {
                 duration: 0.6,
                 delay: Math.min(i, 3) * 0.08,
                 ease,
-              }}
-              className="group relative flex-none snap-start w-[min(84vw,340px)] sm:w-[400px] lg:w-[420px] rounded-2xl border border-white/[0.04] bg-white/[0.01] overflow-hidden transition-all duration-500 hover:border-accent/20 cursor-pointer block"
-            >
-              {/* Screenshot area */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-dark-800">
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background: `linear-gradient(135deg, rgba(1,217,87,${
-                      0.03 + i * 0.008
-                    }) 0%, rgba(5,5,5,0.95) 60%, rgba(10,10,10,1) 100%)`,
-                  }}
-                />
+              },
+            };
+            const cardClass = `group relative flex-none snap-start w-[min(84vw,340px)] sm:w-[400px] lg:w-[420px] rounded-2xl border border-white/[0.04] bg-white/[0.01] overflow-hidden transition-all duration-500 hover:border-accent/20 block ${
+              isLive ? "cursor-pointer" : "cursor-default"
+            }`;
 
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill
-                  className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
-                  sizes="(max-width: 640px) 84vw, 420px"
-                />
+            const cardInner = (
+              <>
+                {/* Screenshot area */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-dark-800">
+                  <div
+                    className="absolute inset-0"
+                    style={{
+                      background: `linear-gradient(135deg, rgba(1,217,87,${
+                        0.03 + i * 0.008
+                      }) 0%, rgba(5,5,5,0.95) 60%, rgba(10,10,10,1) 100%)`,
+                    }}
+                  />
 
-                {/* Faint grid inside screenshot area */}
-                <div
-                  className="absolute inset-0 opacity-[0.04]"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(rgba(1,217,87,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(1,217,87,0.3) 1px, transparent 1px)",
-                    backgroundSize: "40px 40px",
-                  }}
-                />
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                    sizes="(max-width: 640px) 84vw, 420px"
+                  />
 
-                {/* Green hover overlay */}
-                <div className="absolute inset-0 bg-accent/[0.08] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  {/* Faint grid inside screenshot area */}
+                  <div
+                    className="absolute inset-0 opacity-[0.04]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(rgba(1,217,87,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(1,217,87,0.3) 1px, transparent 1px)",
+                      backgroundSize: "40px 40px",
+                    }}
+                  />
 
-                {/* Click indicator (appears on hover) */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/90 backdrop-blur-sm shadow-[0_0_30px_rgba(1,217,87,0.3)] scale-90 group-hover:scale-100 transition-transform duration-500">
-                    <span className="text-dark-900 text-sm font-semibold">
-                      View Project
-                    </span>
+                  {/* Green hover overlay */}
+                  <div className="absolute inset-0 bg-accent/[0.08] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  {/* Click indicator (appears on hover, live sites only) */}
+                  {isLive && (
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                      <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/90 backdrop-blur-sm shadow-[0_0_30px_rgba(1,217,87,0.3)] scale-90 group-hover:scale-100 transition-transform duration-500">
+                        <span className="text-dark-900 text-sm font-semibold">
+                          View Project
+                        </span>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 14 14"
+                          fill="none"
+                          aria-hidden
+                          className="transition-transform duration-300 group-hover:translate-x-0.5"
+                        >
+                          <path
+                            d="M1 7h12m0 0L8 2m5 5L8 12"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Card body */}
+                <div className="p-5">
+                  <span className="text-[10px] font-mono text-white/20 tracking-[0.15em] uppercase">
+                    {project.location}
+                  </span>
+                  <h3 className="font-display text-base font-semibold text-white mt-1.5 mb-2 group-hover:text-accent/90 transition-colors duration-300">
+                    {project.title}
+                  </h3>
+
+                  <p className="flex items-center gap-1.5 text-[11px] text-accent/70 mb-3">
                     <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
+                      width="10"
+                      height="10"
+                      viewBox="0 0 10 10"
                       fill="none"
-                      aria-hidden
-                      className="transition-transform duration-300 group-hover:translate-x-0.5"
+                      aria-hidden="true"
                     >
                       <path
-                        d="M1 7h12m0 0L8 2m5 5L8 12"
-                        stroke="currentColor"
-                        strokeWidth="2"
+                        d="M2 5.5l2 2L8 3"
+                        stroke="#01D957"
+                        strokeWidth="1.5"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
                     </svg>
+                    {project.fact}
+                  </p>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-0.5 rounded-full bg-white/[0.03] border border-white/[0.04] text-[10px] font-mono text-white/25 tracking-wider uppercase"
+                      >
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              </div>
 
-              {/* Card body */}
-              <div className="p-5">
-                <span className="text-[10px] font-mono text-white/20 tracking-[0.15em] uppercase">
-                  {project.location}
-                </span>
-                <h3 className="font-display text-base font-semibold text-white mt-1.5 mb-3 group-hover:text-accent/90 transition-colors duration-300">
-                  {project.title}
-                </h3>
+                {/* Bottom border glow on hover */}
+                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              </>
+            );
 
-                <div className="flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2.5 py-0.5 rounded-full bg-white/[0.03] border border-white/[0.04] text-[10px] font-mono text-white/25 tracking-wider uppercase"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Bottom border glow on hover */}
-              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            </motion.a>
-          ))}
+            return isLive ? (
+              <motion.a
+                key={project.title}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${project.title} — view live site (${i + 1} of ${projects.length})`}
+                {...motionProps}
+                className={cardClass}
+              >
+                {cardInner}
+              </motion.a>
+            ) : (
+              <motion.div
+                key={project.title}
+                aria-label={`${project.title} (${i + 1} of ${projects.length})`}
+                {...motionProps}
+                className={cardClass}
+              >
+                {cardInner}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 

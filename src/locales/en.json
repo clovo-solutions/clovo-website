@@ -1,13 +1,13 @@
 {
   "contact": {
     "sectionTag": "Get Started",
-    "heading": "Ready to Put Your Growth on",
-    "headingAccent": "Autopilot?",
+    "heading": "Let's Get You",
+    "headingAccent": "More Clients",
     "description": "Tell us about your business and goals. We'll get back to you within 24 hours with a tailored plan — no obligations, no pressure.",
     "benefits": [
       "Free strategy session — no commitment",
       "Custom growth plan for your business",
-      "See projected ROI before you invest"
+      "Know the cost and what you'll get — before you spend a cent"
     ],
     "form": {
       "name": "Full Name",
@@ -17,17 +17,17 @@
       "phone": "Phone Number",
       "phonePlaceholder": "+357 99 123 456",
       "phoneHint": "Optional",
-      "message": "How can we help?",
+      "message": "Anything you'd like to tell us?",
+      "messageHint": "Optional",
       "messagePlaceholder": "Tell us about your business, goals, or what you're looking to build...",
-      "submit": "Send Message",
+      "submit": "Book My Free Call",
       "submitting": "Sending...",
       "success": "Thank you! We'll be in touch within 24 hours.",
       "error": "Something went wrong. Please try again or email us directly.",
       "validation": {
         "nameRequired": "Please enter your name",
         "emailRequired": "Please enter your email",
-        "emailInvalid": "Please enter a valid email address",
-        "messageRequired": "Please enter a message"
+        "emailInvalid": "Please enter a valid email address"
       }
     }
   }

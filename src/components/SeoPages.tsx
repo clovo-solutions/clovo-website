@@ -38,7 +38,7 @@ export default function SeoPages() {
     <section className="relative pb-28 sm:pb-36 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <p className="text-xs font-mono text-accent/70 tracking-[0.2em] uppercase mb-6 text-center">
-          Explore Our Services
+          More From Clovo
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {pages.map((page) => (

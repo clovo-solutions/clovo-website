@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedSection from "./AnimatedSection";
+import ContactCta from "./ContactCta";
 
 const services = [
   {
@@ -11,10 +12,28 @@ const services = [
         <path d="M9 21V9" />
       </svg>
     ),
-    title: "High-Converting Websites",
+    title: "A Website That Wins You Clients",
     description:
-      "Custom-built websites designed to turn visitors into paying customers. Fast, responsive, and optimized for conversions.",
-    tag: "Design & Dev",
+      "A professional website built to make visitors call, book, or buy — not just look nice. Fast, mobile-first, and yours to keep.",
+    bullets: ["Custom design", "Works perfectly on phones", "Ready in 1–2 weeks"],
+    tag: "Websites",
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="11" cy="11" r="8" />
+        <path d="M21 21l-4.35-4.35" />
+      </svg>
+    ),
+    title: "Get Found on Google",
+    description:
+      "When someone in Cyprus searches for what you do, you show up — and that turns into enquiries.",
+    bullets: [
+      "Local SEO",
+      "Google Maps & reviews",
+      "Simple monthly report showing visitors and bookings",
+    ],
+    tag: "Google & SEO",
   },
   {
     icon: (
@@ -30,69 +49,17 @@ const services = [
         <path d="M12 18h.01" />
       </svg>
     ),
-    title: "Booking System Integration",
+    title: "Online Booking That Runs Itself",
     description:
-      "Seamless booking flows that let your clients schedule appointments 24/7 without back-and-forth emails.",
-    tag: "Automation",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 8V4H8" />
-        <rect x="2" y="2" width="20" height="20" rx="2" />
-        <path d="M2 12h20" />
-        <path d="M12 2v20" />
-      </svg>
-    ),
-    title: "Calendar Sync",
-    description:
-      "Automatic calendar synchronization across Google Calendar, Outlook, and more. Never double-book again.",
-    tag: "Integration",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 00-3-3.87" />
-        <path d="M16 3.13a4 4 0 010 7.75" />
-      </svg>
-    ),
-    title: "Client Acquisition",
-    description:
-      "Automated lead generation pipelines that bring qualified prospects to your doorstep consistently.",
-    tag: "Growth",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 20V10" />
-        <path d="M18 20V4" />
-        <path d="M6 20v-4" />
-      </svg>
-    ),
-    title: "Analytics & Optimization",
-    description:
-      "Data-driven insights to continuously improve performance. Track conversions, identify bottlenecks, and grow faster.",
-    tag: "Analytics",
-  },
-  {
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
-    title: "Save Time & Costs",
-    description:
-      "Eliminate repetitive manual tasks. Our automations save you hours every week and reduce operational overhead.",
-    tag: "Efficiency",
+      "Clients book their own appointments, day or night. Automatic confirmations and reminders mean fewer no-shows and no more phone tag.",
+    bullets: ["24/7 self-booking", "Syncs with your calendar", "Automatic reminders"],
+    tag: "Bookings",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-0 sm:py-0 overflow-hidden">
+    <section id="services" className="relative py-28 sm:py-36 overflow-hidden">
       {/* Section header */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
@@ -100,17 +67,16 @@ export default function Services() {
             What We Do
           </span>
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-5">
-            Everything You Need to{" "}
-            <span className="gradient-text">Grow Online</span>
+            Three Things. <span className="gradient-text">Done Properly.</span>
           </h2>
           <p className="text-white/35 text-lg max-w-2xl mx-auto leading-relaxed">
-            From your first website to a fully automated client acquisition
-            engine — we build the systems that scale your business.
+            From your first website to online bookings and automatic reminders —
+            everything you need to win clients online.
           </p>
         </AnimatedSection>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {services.map((service, i) => (
             <AnimatedSection key={i} delay={i * 0.08}>
               <div className="group relative h-full p-6 sm:p-8 rounded-2xl border border-white/[0.04] bg-white/[0.01] hover:bg-white/[0.03] hover:border-accent/10 transition-all duration-500 cursor-default">
@@ -131,14 +97,60 @@ export default function Services() {
                   <h3 className="font-display text-lg font-semibold text-white mb-3 group-hover:text-accent/90 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-sm text-white/30 leading-relaxed">
+                  <p className="text-sm text-white/30 leading-relaxed mb-5">
                     {service.description}
                   </p>
+
+                  <ul className="space-y-2">
+                    {service.bullets.map((bullet) => (
+                      <li key={bullet} className="flex items-start gap-2.5">
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 10 10"
+                          fill="none"
+                          aria-hidden="true"
+                          className="flex-shrink-0 mt-1"
+                        >
+                          <path
+                            d="M2 5.5l2 2L8 3"
+                            stroke="#01D957"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                        <span className="text-xs text-white/40 leading-relaxed">
+                          {bullet}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Section CTA */}
+        <AnimatedSection className="text-center mt-14 pt-10 border-t border-white/[0.04]">
+          <p className="text-white/35 mb-6">
+            Not sure which one you need? That&apos;s normal — most of our clients
+            weren&apos;t either.
+          </p>
+          <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02] active:scale-[0.98]">
+            Book a Free Call — We&apos;ll Tell You Honestly
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path
+                d="M3 8h10m0 0L9 4m4 4L9 12"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </ContactCta>
+        </AnimatedSection>
       </div>
     </section>
   );

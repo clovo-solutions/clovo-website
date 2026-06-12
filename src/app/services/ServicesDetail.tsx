@@ -54,7 +54,7 @@ const services = [
     tag: "Growth",
     title: "Automated Client Acquisition",
     description:
-      "Stop chasing leads. We build automated pipelines that attract, nurture, and convert prospects into paying clients — on autopilot.",
+      "Stop chasing leads. We set up the systems that attract new enquiries and turn them into paying clients — without you lifting a finger.",
     features: [
       "Lead capture forms & landing pages",
       "Automated follow-up sequences",
@@ -81,8 +81,8 @@ export default function ServicesDetail() {
             What We <span className="gradient-text">Build For You</span>
           </h1>
           <p className="text-white/35 text-lg max-w-2xl mx-auto leading-relaxed">
-            A complete digital ecosystem designed to attract clients,
-            automate operations, and accelerate growth.
+            Everything you need to attract clients, simplify your day-to-day,
+            and grow — built and managed by one team.
           </p>
         </AnimatedSection>
 

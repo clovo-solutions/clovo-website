@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedSection from "./AnimatedSection";
+import ContactCta from "./ContactCta";
 
 const steps = [
   {
@@ -14,14 +15,14 @@ const steps = [
     number: "02",
     title: "Build & Launch",
     description:
-      "Our team designs and builds your digital ecosystem, including your website, booking flows, and automations, all tailored to your brand and built to convert.",
+      "We design and build your website, your booking system, and your automatic reminders — all matched to your brand and ready to bring in clients.",
     detail: "Delivered in 1–4 weeks",
   },
   {
     number: "03",
-    title: "Grow on Autopilot",
+    title: "Watch the Bookings Come In",
     description:
-      "Once everything is live, clients can book on their own, your systems stay in sync, and new leads come in consistently. You can focus on your work while everything else runs in the background.",
+      "Once everything is live, clients book on their own and new enquiries come in week after week. You focus on your work — the website does the rest.",
     detail: "Ongoing support included",
   },
 ];
@@ -86,6 +87,25 @@ export default function HowItWorks() {
             ))}
           </div>
         </div>
+
+        {/* Section CTA */}
+        <AnimatedSection className="text-center mt-14">
+          <p className="text-sm text-white/35 mb-5">
+            Step 1 is free and takes 30 minutes.
+          </p>
+          <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02] active:scale-[0.98]">
+            Book Your Discovery Call
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path
+                d="M3 8h10m0 0L9 4m4 4L9 12"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </ContactCta>
+        </AnimatedSection>
       </div>
     </section>
   );

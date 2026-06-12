@@ -6,7 +6,7 @@ import { trackCTA } from "./GoogleAnalytics";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Grid Background */}
       <div className="absolute inset-0 grid-bg animate-grid-fade" />
 
@@ -88,14 +88,14 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/[0.06] mb-8"
-          aria-label="Automating Business Growth"
+          aria-label="For clinics, restaurants and service businesses in Cyprus"
         >
           <span
             className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"
             aria-hidden="true"
           />
 <span className="text-xs font-mono text-accent tracking-wider uppercase">
-  Cyprus Web Design Agency
+  For clinics, restaurants &amp; service businesses in Cyprus
 </span>
         </motion.div>
 
@@ -131,34 +131,39 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.65 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link
-            href="#contact"
+          <div className="flex flex-col items-center gap-2.5">
+            <Link
+              href="#contact"
               onClick={() => trackCTA("Hero CTA")}
-            className="group relative inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02] active:scale-[0.98]"
-          >
-            Book a Free Strategy Call
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden="true"
-              className="transition-transform duration-300 group-hover:translate-x-1"
+              className="group relative inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02] active:scale-[0.98]"
             >
-              <path
-                d="M3 8h10m0 0L9 4m4 4L9 12"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </Link>
+              Book a Free Call
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                <path
+                  d="M3 8h10m0 0L9 4m4 4L9 12"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Link>
+            <p className="text-xs text-white/40">
+              30 minutes · no obligation · honest advice
+            </p>
+          </div>
           <Link
-            href="#services"
+            href="#projects"
             className="inline-flex items-center gap-2 px-8 py-4 text-white/70 hover:text-white text-base transition-colors duration-300"
           >
-            See What We Do
+            See Our Work
             <svg
               width="14"
               height="14"

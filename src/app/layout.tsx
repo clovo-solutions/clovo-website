@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Clovo Solutions",
     title: "Clovo Solutions | Digital Growth for Modern Businesses",
     description:
-      "Build high-converting websites, automate bookings, and grow your business on autopilot. Book a free strategy call.",
+      "Websites that rank on Google and turn visitors into paying clients — for service businesses, clinics, and SMEs across Cyprus. Book a free call.",
     images: [
       {
         url: "/og-image.png",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clovo Solutions | Digital Growth for Modern Businesses",
     description:
-      "Build high-converting websites, automate bookings, and grow your business on autopilot.",
+      "Websites that rank on Google and turn visitors into paying clients — for businesses across Cyprus.",
     images: ["/og-image.png"],
   },
 
