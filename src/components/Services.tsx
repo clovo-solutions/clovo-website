@@ -138,9 +138,9 @@ export default function Services() {
             Not sure which one you need? That&apos;s normal — most of our clients
             weren&apos;t either.
           </p>
-          <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02] active:scale-[0.98]">
+          <ContactCta className="inline-flex w-full sm:w-auto items-center justify-center text-center gap-2.5 px-6 sm:px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02] active:scale-[0.98]">
             Book a Free Call — We&apos;ll Tell You Honestly
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className="flex-shrink-0">
               <path
                 d="M3 8h10m0 0L9 4m4 4L9 12"
                 stroke="currentColor"

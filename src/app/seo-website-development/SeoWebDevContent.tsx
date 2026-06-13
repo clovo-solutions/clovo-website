@@ -82,7 +82,7 @@ export default function SeoWebDevContent() {
           </p>
 
           {/* CTA 1 */}
-          <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
+          <ContactCta className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
             Book a Free SEO Strategy Call
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
@@ -215,7 +215,7 @@ export default function SeoWebDevContent() {
 
           {/* CTA 2 */}
           <div className="mt-12">
-            <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
+            <ContactCta className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
               Get a Free SEO Audit of Your Current Site
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
@@ -423,7 +423,7 @@ export default function SeoWebDevContent() {
                 you should be ranking for, and lay out exactly what it would
                 take to start getting organic leads. No commitment, no pressure.
               </p>
-              <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
+              <ContactCta className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
                 Book Your Free SEO Strategy Call
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path

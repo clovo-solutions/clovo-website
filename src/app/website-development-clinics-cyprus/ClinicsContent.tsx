@@ -88,7 +88,7 @@ export default function ClinicsContent() {
             appointments. Here&apos;s how we do it.
           </p>
 
-          <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
+          <ContactCta className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
             Book a Free Strategy Call
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path
@@ -217,7 +217,7 @@ export default function ClinicsContent() {
           </div>
 
           <div className="mt-12">
-            <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
+            <ContactCta className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
               Book Your Free Discovery Call
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
@@ -518,7 +518,7 @@ export default function ClinicsContent() {
                 website would look like for your practice. No commitment, no
                 hard sell.
               </p>
-              <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
+              <ContactCta className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
                 Book Your Free Call
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path

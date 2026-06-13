@@ -329,7 +329,7 @@ export default function WebDesignLimassolContent() {
             ))}
           </div>
           <div className="mt-12">
-            <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
+            <ContactCta className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
               Start With a Free Discovery Call
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path
@@ -557,7 +557,7 @@ export default function WebDesignLimassolContent() {
                 outdated websites. Get a free audit and see exactly what&apos;s
                 holding your site back.
               </p>
-              <ContactCta className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
+              <ContactCta className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]">
                 Get Your Free Website Audit
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path

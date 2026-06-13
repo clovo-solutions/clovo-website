@@ -87,14 +87,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/[0.06] mb-8"
+          className="hidden sm:inline-flex items-center justify-center gap-2 px-4 py-1.5 max-w-[90vw] sm:max-w-none rounded-full border border-accent/20 bg-accent/[0.06] mb-8"
           aria-label="For clinics, restaurants and service businesses in Cyprus"
         >
           <span
-            className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"
+            className="hidden sm:block w-1.5 h-1.5 flex-shrink-0 rounded-full bg-accent animate-pulse"
             aria-hidden="true"
           />
-<span className="text-xs font-mono text-accent tracking-wider uppercase">
+<span className="text-xs font-mono text-accent tracking-wider uppercase text-center">
   For clinics, restaurants &amp; service businesses in Cyprus
 </span>
         </motion.div>

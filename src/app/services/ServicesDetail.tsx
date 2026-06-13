@@ -140,7 +140,7 @@ export default function ServicesDetail() {
         <AnimatedSection className="text-center mt-20">
           <Link
             href="/#contact"
-            className="inline-flex items-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
+            className="inline-flex items-center justify-center text-center gap-2.5 px-8 py-4 bg-accent text-dark-900 font-semibold rounded-full text-base transition-all duration-300 hover:shadow-[0_0_40px_rgba(1,217,87,0.35)] hover:scale-[1.02]"
           >
             Book a Free Strategy Call
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
