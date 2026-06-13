@@ -168,25 +168,19 @@ export default function Projects() {
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden md:block w-16 lg:w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden md:block w-16 lg:w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent" />
 
-        <div
+        <motion.div
           ref={trackRef}
           onScroll={handleScroll}
-          className={`flex gap-4 sm:gap-5 overflow-x-auto snap-x snap-mandatory pb-2 ${trackPadding} ${trackSnapPadding} [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden`}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.7, ease }}
+          className={`flex gap-4 sm:gap-5 overflow-x-auto overscroll-x-contain touch-pan-x snap-x snap-mandatory pb-2 ${trackPadding} ${trackSnapPadding} [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden`}
         >
           {projects.map((project, i) => {
             // Only link out to real production domains — vercel.app previews
             // read as demos and leak visitors mid-funnel.
             const isLive = !project.href.includes("vercel.app");
-            const motionProps = {
-              initial: { opacity: 0, y: 24 },
-              whileInView: { opacity: 1, y: 0 },
-              viewport: { once: true, amount: 0.15 },
-              transition: {
-                duration: 0.6,
-                delay: Math.min(i, 3) * 0.08,
-                ease,
-              },
-            };
             const cardClass = `group relative flex-none snap-start w-[min(84vw,340px)] sm:w-[400px] lg:w-[420px] rounded-2xl border border-white/[0.04] bg-white/[0.01] overflow-hidden transition-all duration-500 hover:border-accent/20 block ${
               isLive ? "cursor-pointer" : "cursor-default"
             }`;
@@ -299,29 +293,27 @@ export default function Projects() {
             );
 
             return isLive ? (
-              <motion.a
+              <a
                 key={project.title}
                 href={project.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={`${project.title} — view live site (${i + 1} of ${projects.length})`}
-                {...motionProps}
                 className={cardClass}
               >
                 {cardInner}
-              </motion.a>
+              </a>
             ) : (
-              <motion.div
+              <div
                 key={project.title}
                 aria-label={`${project.title} (${i + 1} of ${projects.length})`}
-                {...motionProps}
                 className={cardClass}
               >
                 {cardInner}
-              </motion.div>
+              </div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
 
       {/* Controls: counter / progress / arrows */}
