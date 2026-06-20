@@ -23,12 +23,12 @@ const projects = [
     href: "https://liva-studio.com/",
   },
   {
-    title: "Milkbar Café · Kitchen · Bar",
-    image: "/milkbar.png",
+    title: "THE COOKHOUSE Café · Kitchen · Bar",
+    image: "/thecookhouse.png",
     tags: ["Web Development", "Local SEO"],
     fact: "Local SEO optimised",
     location: "Limassol",
-    href: "https://milkbar-lilac.vercel.app/",
+    href: "https://thecookhouse.vercel.app/",
   },
   {
     title: "La Veranda Restaurant",
@@ -178,9 +178,8 @@ export default function Projects() {
           className={`flex gap-4 sm:gap-5 overflow-x-auto overscroll-x-contain touch-pan-x snap-x snap-mandatory pb-2 ${trackPadding} ${trackSnapPadding} [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden`}
         >
           {projects.map((project, i) => {
-            // Only link out to real production domains — vercel.app previews
-            // read as demos and leak visitors mid-funnel.
-            const isLive = !project.href.includes("vercel.app");
+            // Make every project with a link clickable, regardless of domain.
+            const isLive = Boolean(project.href);
             const cardClass = `group relative flex-none snap-start w-[min(84vw,340px)] sm:w-[400px] lg:w-[420px] rounded-2xl border border-white/[0.04] bg-white/[0.01] overflow-hidden transition-all duration-500 hover:border-accent/20 block ${
               isLive ? "cursor-pointer" : "cursor-default"
             }`;
