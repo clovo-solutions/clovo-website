@@ -36,7 +36,7 @@ const projects = [
     tags: ["Web Development", "Local SEO"],
     fact: "Local SEO optimised",
     location: "Limassol",
-    href: "https://la-veranda.vercel.app",
+    href: "https://la-veranda-limassol-365.vercel.app/en",
   },
   {
     title: "Auto Cyprus Car Dealership",
